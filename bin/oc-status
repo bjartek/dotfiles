@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+oc project >& /dev/null || exit
+ project=$(oc project | awk -F\" '{print $2}')
+cluster=$(oc project | awk -F\" '{print $4}' | sed -e "s|https://\(.*\)-master.paas.skead.no:8443|\1|" | sed -e "s|https://uil0map-\(.*\).skead.no:8443|\1|" | sed -e "s|https://uil0paas-\(.*\)-master01.skead.no:8443|\1|")
+echo -e " $cluster  $project "

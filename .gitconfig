@@ -1,0 +1,106 @@
+[commit]
+  template = ~/.gitmessage
+[github]
+  user = bjartek
+[core]
+  editor = vim
+  autocrlf = input
+  safecrlf = true
+  excludesfile = ~/.gitignore_global
+[alias]
+  aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+  fix = !sh -c 'git commit -a --fixup HEAD && git push'
+  bd = branch -d
+  br = branch
+  bra = branch -a
+  ca = commit -a -m
+  cb = checkout -b
+  ct = checkout --track -b
+  ci = commit
+  co = checkout
+  cp = cherry-pick
+  ff = !gitflow-feature-finish
+  fs = flow feature start
+  gcap = !sh -c 'git commit -v -a && git push'
+  gpp = !sh -c 'git pull; git push'
+  irb = rebase -i
+  last = log -1 HEAD
+  lc = !git-list-branch-commit
+  lg  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)%an%Creset' --abbrev-commit --date=relative
+  l2 = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  me = merge
+  mes = merge --squash
+  mff = merge --no-ff
+  pa = add -p
+  rb = rebase
+  rh = reset --hard
+  st = status
+  sc = svn dcommit
+  sr = svn rebase
+  unstage = reset HEAD --
+  v=!open -a GitX
+  visual=!open -a GitX
+  standup = log --all --since yesterday --author bjarte@bjartek.org
+[color]
+  ui = auto
+[remote "origin"]
+  push = HEAD
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[branch "master"]
+  rebase = true
+[branch]
+  autosetuprebase = always
+[pull]
+  rebase = true
+[mergetool "fugitive"]
+  cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+[diff]
+  renameLimit = 0
+  tool =  meld
+[difftool]
+  prompt = false
+[merge]
+    tool = meld
+[mergetool]
+  prompt = false
+[push]
+  default = upstream
+  followTags = true
+[include]
+  path = ~/.gitconfig.local
+[gitflow "branch"]
+  master = master
+  develop = develop
+[gitflow "prefix"]
+  feature = feature/
+  release = release/
+  hotfix = hotfix/
+  support = support/
+  versiontag = v
+[url "https://git.aurora.skead.no/scm/"]
+  insteadOf = g:
+[http]
+  followRedirects = 1
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+[mergetool "meld"]
+    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+[user]
+	name = Bjarte Stien Karlsen
+	email = bjarte.karlsen@skatteetate.no

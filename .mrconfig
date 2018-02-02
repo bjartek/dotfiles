@@ -1,0 +1,114 @@
+
+[dev/boober]
+checkout = git clone 'https://github.com/Skatteetaten/boober.git' 'boober'
+
+[dev/aurora-openshift]
+checkout = git clone 'https://github.com/Skatteetaten/aurora-openshift.git' 'aurora-openshift'
+
+[dev/junit5-examples]
+checkout = git clone 'https://github.com/howtoprogram/junit5-examples.git' 'junit5-examples'
+
+[dev/intro-workshop]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ao/intro-workshop.git' 'intro-workshop'
+
+[dev/aurora-ide-konfigurasjon]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/auv/aurora-ide-konfigurasjon.git' 'aurora-ide-konfigurasjon'
+
+[dev/aurora-openshift-objects]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ao/aurora-openshift-objects.git' 'aurora-openshift-objects'
+
+[dev/dotfiles]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/~m89870/dotfiles.git' 'dotfiles'
+
+[dev/katalog]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/sak/katalog.git' 'katalog'
+
+[dev/mokey]
+checkout = git clone 'https://github.com/Skatteetaten/mokey.git' 'mokey'
+
+[dev/openshift-reference-springboot-server]
+checkout = git clone 'https://github.com/Skatteetaten/openshift-reference-springboot-server.git' 'openshift-reference-springboot-server'
+
+[dev/ranger_devicons]
+checkout = git clone 'https://github.com/alexanderjeurissen/ranger_devicons.git' 'ranger_devicons'
+
+[dev/red]
+checkout = git clone 'https://github.com/Skatteetaten/red.git' 'red'
+
+[dev/skatteetaten.github.io]
+checkout = git clone 'https://github.com/Skatteetaten/skatteetaten.github.io.git' 'skatteetaten.github.io'
+
+[dev/spek-gradle-sample]
+checkout = git clone 'https://github.com/spekframework/spek-gradle-sample.git' 'spek-gradle-sample'
+
+[dev/whoami]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/aop/whoami.git' 'whoami'
+
+[ac/aurora]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/aurora.git' 'aurora'
+
+[ac/demo]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/demo.git' 'demo'
+
+[ac/ekom]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/ekom.git' 'ekom'
+
+[ac/folk]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/folk.git' 'folk'
+
+[ac/inmo]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/inmo.git' 'inmo'
+
+[ac/mva]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/mva.git' 'mva'
+
+[ac/paas]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/paas.git' 'paas'
+
+[ac/part]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/part.git' 'part'
+
+[ac/safir]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/safir.git' 'safir'
+
+[ac/sirius]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/sirius.git' 'sirius'
+
+[ac/ski]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/ski.git' 'ski'
+
+[ac-dev/demo]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac-dev/demo.git' 'demo'
+
+[ac-dev/paas]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac-dev/paas.git' 'paas'
+
+[av/aurora]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/av/aurora.git' 'aurora'
+
+[av/ekom]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/av/ekom.git' 'ekom'
+
+[av/folk]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/av/folk.git' 'folk'
+
+[av/paas]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/av/paas.git' 'paas'
+
+[av/part]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/av/part.git' 'part'
+
+[av/safir]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/av/safir.git' 'safir'
+
+[av/sam]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/av/sam.git' 'sam'
+
+[av/sirius]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/av/sirius.git' 'sirius'
+
+[av/ski]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/av/ski.git' 'ski'
+
+[av/tjint]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/av/tjint.git' 'tjint'

@@ -1,0 +1,49 @@
+set surround
+set gdefault
+set ignorecase
+
+nnoremap ; :
+let mapleader="\<SPACE>"
+"from https://www.codatlas.com/github.com/beloglazov/vimrc/master/.ideavimrc
+" Moving blocks of text in visual mode
+vnoremap < <gv
+vnoremap > >gv
+
+" Select all text
+map <Space>a ggVG
+
+" Copy until the end of the line
+noremap Y y$
+
+" Indent everything
+noremap <Space>I ggvG=
+
+" Indent selection in visual mode
+vnoremap <Space>i =
+
+" Indent the current line
+noremap <Space>i v=
+
+" Change current word - kill
+noremap K ciw
+
+" Reload .ideavimrc
+nnoremap <Space>vs :source ~/.ideavimrc<CR>
+
+
+" ============================================================================
+" IDE actions
+" ============================================================================
+
+nnoremap / :action Find<CR>
+nnoremap n :action FindNext<CR>
+nnoremap N :action FindPrevious<CR>
+nnoremap U :action $Redo<CR>
+nnoremap <Space>o :action GotoClass<CR>
+nnoremap <Space>O :action GotoFile<CR>
+nnoremap <Space>d :action CloseContent<CR>
+nnoremap <Space>j :action RecentFiles<CR>
+nnoremap <Space>k :action FileStructurePopup<CR>
+nnoremap <Space>h :action QuickJavaDoc<CR>
+
+

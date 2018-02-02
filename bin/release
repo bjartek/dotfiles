@@ -1,0 +1,12 @@
+#!/bin/bash
+set -eu
+[[ $# -ne 1 ]] && { echo "Usage: $0 tag"; exit 1; }
+
+git checkout develop
+git pull
+git checkout master
+git pull
+git merge develop
+git tag -am "$1" $1
+git push
+git checkout develop

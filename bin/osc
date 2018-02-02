@@ -1,0 +1,12 @@
+#! /bin/bash
+oc config use-context $1 | grep -qi switched 
+
+if [ $? -eq 0 ]; then
+
+  oc login -u $USER
+
+else
+
+  echo "Context not found"
+
+fi

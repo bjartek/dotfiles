@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ "$#" -lt 1 ]; then
+  echo "Spefisier IDENT"
+  exit 1
+fi
+ldapsearch -Q -H "ldap://ldap.skead.no:3268" -b "DC=skead,DC=no" "(&(objectCategory=person)(objectClass=user)(displayName=$1))"
+

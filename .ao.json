@@ -1,0 +1,41 @@
+{
+  "apiCluster": "utv",
+  "affiliation": "demo",
+  "localhost": false,
+  "clusters": {
+    "qa": {
+      "name": "qa",
+      "url": "https://qa-master.paas.skead.no:8443",
+      "reachable": true,
+      "booberUrl": "http://boober-aurora.qa.paas.skead.no"
+    },
+    "utv": {
+      "name": "utv",
+      "url": "https://utv-master.paas.skead.no:8443",
+      "reachable": true,
+      "booberUrl": "http://boober-aurora.utv.paas.skead.no"
+    },
+    "utv-relay": {
+      "name": "utv-relay",
+      "url": "https://utv-relay-master.paas.skead.no:8443",
+      "reachable": true,
+      "booberUrl": "http://boober-aurora.utv-relay.paas.skead.no"
+    }
+  },
+  "availableClusters": [
+    "utv",
+    "utv-relay",
+    "qa"
+  ],
+  "preferredApiClusters": [
+    "utv",
+    "test"
+  ],
+  "availableUpdateClusters": [
+    "utv",
+    "test"
+  ],
+  "clusterUrlPattern": "https://%s-master.paas.skead.no:8443",
+  "booberUrlPattern": "http://boober-aurora.%s.paas.skead.no",
+  "updateUrlPattern": "http://ao-aurora-tools.%s.paas.skead.no"
+}
