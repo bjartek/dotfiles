@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo "Installing homebrew"
+which brew &> /dev/null || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update
+brew upgrade
+brew cleanup
+
+which yadm &> /dev/null || brew install yadm
+
+echo "Checkout out updating dotfiles"
+
+[[ -d ~/.yadm/repo.git ]] || yadm clone "yadm url"
+yadm update
+echo "decrypt yadm"
+yadm decrypt
+
+echo "install/update brews"
+brew bundle
+
+grep fish /etc/shells &> /dev/null || echo $(which fish) >> /etc/shells
+[[ "$SHELL" == "$(which fish)" ]] || chsh -s $(which fish)
+
+echo "Syncing git repositories"
+mr -j 10 co
+mr -j 10 update
+
+echo "Check that vim-plug has run"
+[[ -d ~/.vim ]] || vim +PlugInstall +qall
