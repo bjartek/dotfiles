@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "update dotfiles"
+
+yadm update
+echo "decrypt yadm"
+yadm decrypt
+
+
+echo "update brews"
+brew update
+brew upgrade
+brew bundle
+brew cleanup
+
+echo "Syncing git repositories"
+mr -j 10 co
+mr -j 10 update
+
+echo "update vim"
+vim +PlugInstall +qall
