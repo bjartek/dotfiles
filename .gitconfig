@@ -19,13 +19,10 @@
   ci = commit
   co = checkout
   cp = cherry-pick
-  ff = !gitflow-feature-finish
-  fs = flow feature start
   gcap = !sh -c 'git commit -v -a && git push'
   gpp = !sh -c 'git pull; git push'
   irb = rebase -i
   last = log -1 HEAD
-  lc = !git-list-branch-commit
   lg  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)%an%Creset' --abbrev-commit --date=relative
   l2 = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
   me = merge
@@ -35,12 +32,9 @@
   rb = rebase
   rh = reset --hard
   st = status
-  sc = svn dcommit
-  sr = svn rebase
   unstage = reset HEAD --
   v=!open -a GitX
   visual=!open -a GitX
-  standup = log --all --since yesterday --author bjarte@bjartek.org
 [color]
   ui = auto
 [remote "origin"]
@@ -95,12 +89,11 @@
   versiontag = v
 [url "https://git.aurora.skead.no/scm/"]
   insteadOf = g:
+[url "https://github.com/skatteetaten"]
+  insteadOf = gh:
 [http]
   followRedirects = 1
 [difftool "meld"]
     cmd = meld "$LOCAL" "$REMOTE"
 [mergetool "meld"]
     cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
-[user]
-	name = Bjarte Stien Karlsen
-	email = bjarte.karlsen@skatteetate.no
