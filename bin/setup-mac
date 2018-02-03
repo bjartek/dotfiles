@@ -9,4 +9,7 @@ yadm clone "yadm url"
 echo $(which fish) >> /etc/shells
 echo -s $(which fish)
 
+mkdir ac
+mkdir ac-dev
+mkdir dev
 update
