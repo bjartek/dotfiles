@@ -12,4 +12,4 @@ chsh -s $(which fish)
 mkdir ~/ac
 mkdir ~/ac-dev
 mkdir ~/dev
-~/binupdate
+~/bin/update
