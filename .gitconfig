@@ -89,8 +89,8 @@
   versiontag = v
 [url "https://git.aurora.skead.no/scm/"]
   insteadOf = g:
-[url "https://github.com/skatteetaten"]
-  insteadOf = gh:
+[url "https://github.com/skatteetaten/"]
+  insteadOf = ghs:
 [http]
   followRedirects = 1
 [difftool "meld"]

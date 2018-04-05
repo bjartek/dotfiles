@@ -5,3 +5,5 @@
 .ssh/*
 .config/keybase/*
 bin/prowl
+.exercism.json
+.config/fish/conf.d/github.fish

@@ -1,0 +1,1 @@
+/Users/m89870/.config/fisherman/get/completions/get.fish

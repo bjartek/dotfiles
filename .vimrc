@@ -51,7 +51,6 @@ Plug 'tpope/vim-repeat'
 Plug 'scrooloose/syntastic'    " syntax checking
 
 Plug 'easymotion/vim-easymotion' "easier moving around
-"go
 
 Plug 'majutsushi/tagbar'
 
@@ -63,9 +62,6 @@ Plug 'edsono/vim-matchit', { 'for': ['html', 'xml'] }
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'fatih/vim-go',  { 'for' : 'go' }
-Plug 'maralla/completor.vim'
-let g:completor_go_omni_trigger = '(?:\b[^\W\d]\w*|[\]\)])\.(?:[^\W\d]\w*)?'
 
 " For conceal markers.
 if has('conceal')
@@ -74,19 +70,6 @@ endif
 
 "go keybings
 set autowrite
-let g:go_list_type = "quickfix" "prefer quicklist to locationlist
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_interfaces = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_fmt_command = "goimports"
-let g:go_textobj_include_function_doc = 1
-let g:go_fmt_fail_silently = 1
-
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 Plug 'scrooloose/nerdtree'
 Plug 'taiansu/nerdtree-ag'
@@ -159,38 +142,6 @@ let maplocalleader=" "
 nmap <silent> <Leader>c :bdelete<CR>
 nmap <silent> <Leader>w :write<CR>
 
-"go mappings
-au FileType go nmap <leader>r <Plug>(go-run)
-" run :GoBuild or :GoTestCompile based on the go file
-function! s:build_go_files()
-  let l:file = expand('%')
-  if l:file =~# '^\f\+_test\.go$'
-    call go#cmd#Test(0, 1)
-  elseif l:file =~# '^\f\+\.go$'
-    call go#cmd#Build(0)
-  endif
-endfunction
-
-
-autocmd FileType go setlocal expandtab
-au FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>tt <Plug>(go-test-func)
-au FileType go nmap <leader>c <Plug>(go-coverage-toggle)
-
-au FileType go nmap <Leader>ds <Plug>(go-def-split)
-au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
-au FileType go nmap <Leader>dt <Plug>(go-def-tab)
-au FileType go nmap <Leader>a <Plug>(go-alternate-edit)
-au FileType go nmap <Leader>as <Plug>(go-alternate-split)
-au FileType go nmap <Leader>av <Plug>(go-alternate-vertical)
-
-au FileType go nmap <Leader>do <Plug>(go-doc)
-au FileType go nmap <Leader>dov <Plug>(go-doc-vertical)
-au FileType go nmap <Leader>dob <Plug>(go-doc-browser)
-au FileType go nmap <Leader>s <Plug>(go-implements)
-au FileType go nmap <Leader>e <Plug>(go-rename)
-au FileType go nmap <Leader>i <Plug>(go-info)
 noremap <leader>qq :cclose<CR>
 map <leader>q :cnext<CR>
 

@@ -112,3 +112,6 @@ checkout = git clone 'https://m89870@git.aurora.skead.no/scm/av/ski.git' 'ski'
 
 [av/tjint]
 checkout = git clone 'https://m89870@git.aurora.skead.no/scm/av/tjint.git' 'tjint'
+
+[go/src/github.com/skatteetaten/ao]
+checkout = git clone 'ghs:ao.git' 'ao'
