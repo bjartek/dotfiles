@@ -1,1 +1,0 @@
-/Users/m89870/.config/fish/fish-kubectl-completions/kubectl.fish

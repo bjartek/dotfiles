@@ -1,6 +1,6 @@
 {
-  "refName": "",
-  "apiCluster": "qa",
+  "refName": "master",
+  "apiCluster": "utv",
   "affiliation": "paas",
   "localhost": false,
   "clusters": {
@@ -9,49 +9,42 @@
       "url": "https://prod-master.paas.skead.no:8443",
       "token": "",
       "reachable": false,
-      "booberUrl": "http://boober-dev-aurora.prod.paas.skead.no"
+      "booberUrl": "http://boober-aurora.prod.paas.skead.no"
     },
     "prod-relay": {
       "name": "prod-relay",
       "url": "https://prod-relay-master.paas.skead.no:8443",
       "token": "",
       "reachable": false,
-      "booberUrl": "http://boober-dev-aurora.prod-relay.paas.skead.no"
-    },
-    "qa": {
-      "name": "qa",
-      "url": "https://qa-master.paas.skead.no:8443",
-      "token": "yz_rLU13YGoascgqFrO2xkkiRtyDowzfwPITD-3zxLU",
-      "reachable": true,
-      "booberUrl": "http://boober-dev-aurora.qa.paas.skead.no"
+      "booberUrl": "http://boober-aurora.prod-relay.paas.skead.no"
     },
     "test": {
       "name": "test",
       "url": "https://test-master.paas.skead.no:8443",
       "token": "",
       "reachable": false,
-      "booberUrl": "http://boober-dev-aurora.test.paas.skead.no"
+      "booberUrl": "http://boober-aurora.test.paas.skead.no"
     },
     "test-relay": {
       "name": "test-relay",
       "url": "https://test-relay-master.paas.skead.no:8443",
       "token": "",
       "reachable": false,
-      "booberUrl": "http://boober-dev-aurora.test-relay.paas.skead.no"
+      "booberUrl": "http://boober-aurora.test-relay.paas.skead.no"
     },
     "utv": {
       "name": "utv",
       "url": "https://utv-master.paas.skead.no:8443",
-      "token": "WWeahajCI48NXdK_jLTObiKgyvn6_4B_RQMRsqEkxe8",
+      "token": "94yqQIuCuXdwMra5VG8xSigPdZYlhpVIZr9mkxOfNBE",
       "reachable": true,
-      "booberUrl": "http://boober-dev-aurora.utv.paas.skead.no"
+      "booberUrl": "http://boober.dev.aurora.utv.paas.skead.no"
     },
     "utv-relay": {
       "name": "utv-relay",
       "url": "https://utv-relay-master.paas.skead.no:8443",
-      "token": "FbRFZhV7snhMbpNxSNVy3GPfRXnrBpxD8hDa2L4tERg",
+      "token": "M1LY6Ac-_6IAptWhAjNA5cxOl7-1nyZUpatnMpFTyyM",
       "reachable": true,
-      "booberUrl": "http://boober-dev-aurora.utv-relay.paas.skead.no"
+      "booberUrl": "http://boober-aurora.utv-relay.paas.skead.no"
     }
   },
   "availableClusters": [
@@ -60,8 +53,7 @@
     "test",
     "test-relay",
     "prod",
-    "prod-relay",
-    "qa"
+    "prod-relay"
   ],
   "preferredApiClusters": [
     "utv",
@@ -72,6 +64,6 @@
     "test"
   ],
   "clusterUrlPattern": "https://%s-master.paas.skead.no:8443",
-  "booberUrlPattern": "http://boober-dev-aurora.%s.paas.skead.no",
+  "booberUrlPattern": "http://boober-aurora.%s.paas.skead.no",
   "updateUrlPattern": "http://ao-aurora-tools.%s.paas.skead.no"
 }

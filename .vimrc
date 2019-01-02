@@ -9,6 +9,7 @@ endif
 
 call plug#begin()
 
+Plug 'rkitover/vimpager'
 Plug 'editorconfig/editorconfig-vim'
 "Plug 'tpope/vim-sensible' "base sensible options
 

@@ -1,3 +1,0 @@
-#!/bin/bash
-
-oc project $1 &> /dev/null && oc project &> /dev/null

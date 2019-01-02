@@ -35,9 +35,6 @@ checkout = git clone 'https://github.com/alexanderjeurissen/ranger_devicons.git'
 [dev/red]
 checkout = git clone 'https://github.com/Skatteetaten/red.git' 'red'
 
-[dev/skatteetaten.github.io]
-checkout = git clone 'https://github.com/Skatteetaten/skatteetaten.github.io.git' 'skatteetaten.github.io'
-
 [dev/spek-gradle-sample]
 checkout = git clone 'https://github.com/spekframework/spek-gradle-sample.git' 'spek-gradle-sample'
 
@@ -115,3 +112,84 @@ checkout = git clone 'https://m89870@git.aurora.skead.no/scm/av/tjint.git' 'tjin
 
 [go/src/github.com/skatteetaten/ao]
 checkout = git clone 'ghs:ao.git' 'ao'
+
+[ac/aaregister]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/aaregister.git' 'aaregister'
+
+[ac/amelding]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/amelding.git' 'amelding'
+
+[ac/ats]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/ats.git' 'ats'
+
+[ac/dok]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/dok.git' 'dok'
+
+[ac/gld]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/gld.git' 'gld'
+
+[ac/klg]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/klg.git' 'klg'
+
+[ac/serg]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/serg.git' 'serg'
+
+[ac/evogent]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/evogent.git' 'evogent'
+
+[ac/forskudd]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/forskudd.git' 'forskudd'
+
+[ac/innsyn]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/innsyn.git' 'innsyn'
+
+[ac/keo]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/keo.git' 'keo'
+
+[ac/mag]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/mag.git' 'mag'
+
+[ac/oppdragreg]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/oppdragreg.git' 'oppdragreg'
+
+[ac/opphold]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/opphold.git' 'opphold'
+
+[ac/sakmap]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/sakmap.git' 'sakmap'
+
+[ac/sam]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/sam.git' 'sam'
+
+[ac/sat]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/sat.git' 'sat'
+
+[ac/sian]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/sian.git' 'sian'
+
+[ac/sianint]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/sianint.git' 'sianint'
+
+[ac/skattbereg]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/skattbereg.git' 'skattbereg'
+
+[ac/skattoppgj]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/skattoppgj.git' 'skattoppgj'
+
+[ac/skattplikt]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/skattplikt.git' 'skattplikt'
+
+[ac/sofie]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/sofie.git' 'sofie'
+
+[ac/sofus]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/sofus.git' 'sofus'
+
+[ac/testsenter]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/testsenter.git' 'testsenter'
+
+[ac/tjint]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/tjint.git' 'tjint'
+
+[ac/trknav]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/trknav.git' 'trknav'
