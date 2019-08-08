@@ -18,6 +18,7 @@ Plug 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
+
 Plug 'altercation/vim-colors-solarized' "pretty colors
 Plug 'nanotech/jellybeans.vim'
 Plug 'fatih/molokai'
@@ -85,6 +86,7 @@ Plug 'int3/vim-extradite' "git log stuff
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'rhysd/committia.vim'
 
 
 Plug 'mhinz/vim-startify'
@@ -257,3 +259,19 @@ set grepprg=rg\ --vimgrep
 " hide everywhere
 set wildignore+=*.o,.git,.svn,node_modules,vendor,bower_components,jsdocs,coverage
 set nolist
+
+let g:committia_hooks = {}
+function! g:committia_hooks.edit_open(info)
+    " Additional settings
+    setlocal spell
+
+    " If no commit message, start with insert mode
+    if a:info.vcs ==# 'git' && getline(1) ==# ''
+        startinsert
+    endif
+
+    " Scroll the diff window from insert mode
+    " Map <C-n> and <C-p>
+    imap <buffer><C-n> <Plug>(committia-scroll-diff-down-half)
+    imap <buffer><C-p> <Plug>(committia-scroll-diff-up-half)
+endfunction

@@ -119,9 +119,6 @@ checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/aaregister.git' 
 [ac/amelding]
 checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/amelding.git' 'amelding'
 
-[ac/ats]
-checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/ats.git' 'ats'
-
 [ac/dok]
 checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/dok.git' 'dok'
 
@@ -146,17 +143,11 @@ checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/innsyn.git' 'inn
 [ac/keo]
 checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/keo.git' 'keo'
 
-[ac/mag]
-checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/mag.git' 'mag'
-
 [ac/oppdragreg]
 checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/oppdragreg.git' 'oppdragreg'
 
 [ac/opphold]
 checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/opphold.git' 'opphold'
-
-[ac/sakmap]
-checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/sakmap.git' 'sakmap'
 
 [ac/sam]
 checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/sam.git' 'sam'

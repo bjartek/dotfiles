@@ -1,5 +1,3 @@
-[commit]
-  template = ~/.gitmessage
 [github]
   user = bjartek
 [core]
@@ -10,6 +8,7 @@
 [alias]
   aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
   fix = !sh -c 'git commit -a --fixup HEAD && git push'
+  auto= rebase --interactive --autosquash  master
   bd = branch -d
   br = branch
   bra = branch -a
