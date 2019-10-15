@@ -8,7 +8,7 @@
 [alias]
   aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
   fix = !sh -c 'git commit -a --fixup HEAD && git push'
-  auto= rebase --interactive --autosquash  master
+  auto = rebase --interactive --autosquash  master
   bd = branch -d
   br = branch
   bra = branch -a
@@ -19,10 +19,10 @@
   co = checkout
   cp = cherry-pick
   gcap = !sh -c 'git commit -v -a && git push'
-  gpp = !sh -c 'git pull; git push'
+  gpp = !sh -c 'git pull ; git push'
   irb = rebase -i
   last = log -1 HEAD
-  lg  = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)%an%Creset' --abbrev-commit --date=relative
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)%an%Creset' --abbrev-commit --date=relative
   l2 = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
   me = merge
   mes = merge --squash
@@ -32,8 +32,8 @@
   rh = reset --hard
   st = status
   unstage = reset HEAD --
-  v=!open -a GitX
-  visual=!open -a GitX
+  v = !open -a GitX
+  visual = !open -a GitX
 [color]
   ui = auto
 [remote "origin"]
@@ -65,7 +65,7 @@
   cmd = vim -f -c \"Gdiff\" \"$MERGED\"
 [diff]
   renameLimit = 0
-  tool =  meld
+  tool = meld
 [difftool]
   prompt = false
 [merge]
@@ -93,6 +93,12 @@
 [http]
   followRedirects = 1
 [difftool "meld"]
-    cmd = meld "$LOCAL" "$REMOTE"
+    cmd = meld $LOCAL $REMOTE
 [mergetool "meld"]
-    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+    cmd = meld $LOCAL $MERGED $REMOTE --output $MERGED
+[user]
+	name = Bjarte Karlsen
+	email = bjarte.karlsen@skatteetaten.no
+[filesystem "AdoptOpenJDK|11.0.4|/dev/disk1s1"]
+	timestampResolution = 7000 nanoseconds
+	minRacyThreshold = 0 nanoseconds

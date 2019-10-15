@@ -7,7 +7,9 @@ set -x LANG en_US.UTF-8
 set -g GOPATH ~/go
 set -g GOROOT /usr/local/opt/go/libexec
 
+set -g GROOVY_TURN_OFF_JAVA_WARNINGS true
 set -x JAVA_HOME (/usr/libexec/java_home -v 11)
+set -x GRADLE_USER_HOME ~/.gradle
 set -x PATH  $HOME/bin $GOPATH $GOROOT $HOME/.cargo/bin $JAVA_HOME/bin /usr/local/opt/gnu-sed/libexec/gnubin /usr/local/opt/coreutils/libexec/gnubin /usr/local/opt/findutils/libexec/gnubin $PATH
 
 set -g theme_display_vi no
@@ -23,3 +25,4 @@ alias ..="cd .."
 alias ...="cd ../.."
 set -U FZF_COMPLETE 1
 set -g -x BAT_THEME TwoDark
+set -g fish_user_paths "/usr/local/opt/node@10/bin" $fish_user_paths

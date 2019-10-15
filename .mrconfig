@@ -184,3 +184,6 @@ checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/tjint.git' 'tjin
 
 [ac/trknav]
 checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/trknav.git' 'trknav'
+
+[ac/ktf]
+checkout = git clone 'https://m89870@git.aurora.skead.no/scm/ac/ktf.git' 'ktf'
