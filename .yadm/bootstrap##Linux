@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "foo"
+
+yadm decrypt
+
+xargs sudo apt -y install < ~/.s/apt
+
+cat ~/.s/snaps | grep classic | awk '{print $1}' | xargs -L 1 sudo snap install --classic    
+cat ~/.s/snaps | grep -v -e classic -e core | awk '{print $1}' | xargs -L 1 sudo snap install

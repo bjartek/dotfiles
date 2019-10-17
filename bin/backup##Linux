@@ -1,0 +1,15 @@
+#!/bin/bash
+
+comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u) > ~/.s/apt
+
+snap list | grep -v Name > ~/.s/snaps
+
+echo "Register git repos"
+for i in dev/*; do mr register $i; end
+for i in ac/*; do mr register $i; end
+for i in ac-dev/*; do mr register $i; end
+
+echo "Encrypt and backup dotfiles"
+yadm encrypt
+yadm commit 
+yadm push
