@@ -9,6 +9,7 @@ endif
 
 call plug#begin()
 
+Plug 'vimwiki/vimwiki'
 Plug 'rkitover/vimpager'
 Plug 'editorconfig/editorconfig-vim'
 "Plug 'tpope/vim-sensible' "base sensible options
@@ -275,3 +276,13 @@ function! g:committia_hooks.edit_open(info)
     imap <buffer><C-n> <Plug>(committia-scroll-diff-down-half)
     imap <buffer><C-p> <Plug>(committia-scroll-diff-up-half)
 endfunction
+
+let g:vimwiki_list = [ {'path': '~/.s/wiki/wyn'},{'path': '~/.s/wiki/tech'}, {'path': '~/.s/wiki/jonathan'}]
+
+command! Diary VimwikiDiaryIndex
+augroup vimwikigroup
+    autocmd!
+    " automatically update links on read diary
+    autocmd BufRead,BufNewFile diary.wiki VimwikiDiaryGenerateLinks
+augroup end
+

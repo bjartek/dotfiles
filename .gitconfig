@@ -102,3 +102,11 @@
 [filesystem "AdoptOpenJDK|11.0.4|/dev/disk1s1"]
 	timestampResolution = 7000 nanoseconds
 	minRacyThreshold = 0 nanoseconds
+[credential]
+	helper = cache --timeout=3600
+[filesystem "JetBrains s.r.o|11.0.4|/dev/nvme0n1p3"]
+	timestampResolution = 15000 nanoseconds
+	minRacyThreshold = 4058 microseconds
+[filesystem "Ubuntu|11.0.4|/dev/nvme0n1p3"]
+	timestampResolution = 12000 nanoseconds
+	minRacyThreshold = 7281 microseconds
