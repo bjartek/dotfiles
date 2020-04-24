@@ -10,3 +10,9 @@ bin/prowl
 .s/*
 .config/Yubico/
 .kube/config
+.mrconfig
+.config/spring-boot/spring-boot-devtools.properties
+.m2/settings_sits.xml
+.gradle/init.gradle
+.aws/config
+.aws/credentails

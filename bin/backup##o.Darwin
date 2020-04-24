@@ -6,11 +6,10 @@ echo "Dump brews"
 brew bundle dump -f
 
 echo "Register git repos"
-for i in dev/*; do mr register $i; end
-for i in ac/*; do mr register $i; end
-for i in ac-dev/*; do mr register $i; end
+for i in dev/*; do mr register $i; done
+for i in ac/*; do mr register $i; done
 
 echo "Encrypt and backup dotfiles"
 yadm encrypt
 yadm commit 
-yadm push
+#yadm push
