@@ -11,5 +11,6 @@ for i in ac/*; do mr register $i; done
 
 echo "Encrypt and backup dotfiles"
 yadm encrypt
+yadm add .config/yadm/files.gpg
 yadm commit 
-#yadm push
+yadm push
