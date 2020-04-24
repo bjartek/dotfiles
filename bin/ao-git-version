@@ -1,0 +1,31 @@
+#!/bin/bash
+
+error_exit() {
+  echo -e "$@"
+  exit 1
+}
+
+if [[ ! -d ".git" ]]; then
+ error_exit "Not a git project"
+fi
+
+[[ "$#" -lt 1 ]] && error_exit "setup <env> (<application>)"
+which ao &> /dev/null || error_exit "Please install ao in path"
+
+ao get env &> /dev/null || error_exit "Log in to ao"
+env=$1
+shift
+
+if [[ "$#" -eq 1 ]]; then
+  project=$1 
+else 
+  project=$(basename `git rev-parse --show-toplevel`)
+fi
+
+version=$(aurora-git-version)
+
+[[ $? -ne 0 ]] && error_exit "failed setting git version" 
+
+ao get env $env &> /dev/null || error_exit "Template project $env does not exist"
+
+ao set $env/$project /version $version

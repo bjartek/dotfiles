@@ -1,0 +1,12 @@
+.gh
+.gnupg/*
+.gradle/gradle.properties
+.m2/settings.xml
+.ssh/*
+.config/keybase/*
+bin/prowl
+.exercism.json
+.config/fish/conf.d/github.fish
+.s/*
+.config/Yubico/
+.kube/config

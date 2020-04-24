@@ -1,0 +1,3 @@
+#!/bin/bash
+
+vimpager -c 'set ft=json'

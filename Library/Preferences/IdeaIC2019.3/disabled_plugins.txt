@@ -1,0 +1,2 @@
+CloudFoundry
+com.intellij.uiDesigner

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+[[ "$#" -lt 1 ]] && error_exit "a <auroraConfig>"
+
+name=$1
+shift
+
+ao login "$name" --password "$(security find-generic-password -a "$USER" -s openshift -w)" $@

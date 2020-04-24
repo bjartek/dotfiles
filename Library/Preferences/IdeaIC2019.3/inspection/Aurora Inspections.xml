@@ -1,0 +1,12 @@
+<profile version="1.0">
+  <option name="myName" value="Aurora Inspections" />
+  <inspection_tool class="GroovyAccessibility" enabled="false" level="WARNING" enabled_by_default="false" />
+  <inspection_tool class="GroovyAssignabilityCheck" enabled="false" level="WARNING" enabled_by_default="false" />
+  <inspection_tool class="KotlinUnusedImport" enabled="true" level="ERROR" enabled_by_default="true" />
+  <inspection_tool class="RedundantSemicolon" enabled="true" level="ERROR" enabled_by_default="true" />
+  <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
+    <option name="processCode" value="true" />
+    <option name="processLiterals" value="true" />
+    <option name="processComments" value="true" />
+  </inspection_tool>
+</profile>

@@ -1,0 +1,172 @@
+<application>
+  <component name="VimLocalSettings">
+    <state version="5" />
+    <globalmarks />
+    <filemarks>
+      <file name="/Dummy.txt" timestamp="1586954463948">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="/GraphQL.result.json" timestamp="1587368388169">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/dev/presentation-aurora-openshift/src/docs/asciidoc/byggepipeline-aws.puml" timestamp="1587368411864">
+        <mark key="[" line="22" column="38" />
+        <mark key="]" line="22" column="37" />
+        <mark key="." line="22" column="37" />
+      </file>
+      <file name="$USER_HOME$/dev/mokey/src/main/kotlin/no/skatteetaten/aurora/mokey/service/OpenShiftManagementClient.kt" timestamp="1585936169916">
+        <mark key="[" line="110" column="0" />
+        <mark key="]" line="110" column="0" />
+        <mark key="." line="110" column="0" />
+        <mark key="^" line="124" column="8" />
+      </file>
+      <file name="$USER_HOME$/dev/mokey/src/test/kotlin/no/skatteetaten/aurora/mokey/service/ApplicationDataServiceTest.kt" timestamp="1585773927071">
+        <mark key="[" line="75" column="12" />
+        <mark key="]" line="75" column="15" />
+        <mark key="." line="75" column="15" />
+        <mark key="^" line="75" column="15" />
+      </file>
+      <file name="$USER_HOME$/dev/mokey/src/main/kotlin/no/skatteetaten/aurora/mokey/model/ApplicationData.kt" timestamp="1586954461109">
+        <mark key="[" line="103" column="23" />
+        <mark key="]" line="103" column="27" />
+        <mark key="." line="103" column="27" />
+        <mark key="^" line="103" column="27" />
+      </file>
+      <file name="$USER_HOME$/dev/mokey/src/main/kotlin/no/skatteetaten/aurora/mokey/service/ApplicationDataServiceOpenShift.kt" timestamp="1586951213304">
+        <mark key="[" line="261" column="12" />
+        <mark key="]" line="261" column="16" />
+        <mark key="." line="261" column="16" />
+        <mark key="^" line="261" column="16" />
+      </file>
+      <file name="$USER_HOME$/dev/mokey/src/test/kotlin/no/skatteetaten/aurora/mokey/testDataBuilders.kt" timestamp="1585773493808">
+        <mark key="[" line="455" column="11" />
+        <mark key="]" line="455" column="19" />
+        <mark key="." line="455" column="19" />
+        <mark key="^" line="455" column="19" />
+      </file>
+      <file name="$USER_HOME$/dev/mokey/src/test/kotlin/no/skatteetaten/aurora/mokey/service/OpenShiftPhaseGenrator.kt" timestamp="1585914209914">
+        <mark key="[" line="2" column="0" />
+        <mark key="]" line="2" column="0" />
+        <mark key="." line="2" column="0" />
+      </file>
+      <file name="$USER_HOME$/dev/mokey/src/main/kotlin/no/skatteetaten/aurora/mokey/model/ManagementEndpointResponses.kt" timestamp="1586857458430">
+        <mark key="[" line="21" column="0" />
+        <mark key="]" line="21" column="0" />
+        <mark key="^" line="24" column="51" />
+        <mark key="." line="21" column="0" />
+      </file>
+      <file name="$USER_HOME$/dev/mokey/src/main/kotlin/no/skatteetaten/aurora/mokey/service/auroraStatus/deploymentStatusChecks.kt" timestamp="1585917129013">
+        <mark key="[" line="53" column="4" />
+        <mark key="]" line="53" column="4" />
+        <mark key="." line="53" column="4" />
+      </file>
+      <file name="$USER_HOME$/dev/presentation-aurora-openshift/src/docs/asciidoc/byggepipeline.puml" timestamp="1587368419129">
+        <mark key="[" line="20" column="38" />
+        <mark key="]" line="20" column="38" />
+        <mark key="." line="20" column="38" />
+        <mark key="^" line="20" column="38" />
+      </file>
+      <file name="$USER_HOME$/dev/mokey/src/test/kotlin/no/skatteetaten/aurora/mokey/service/ManagementDataServiceNetworkTest.kt" timestamp="1585933266288">
+        <mark key="]" line="83" column="5" />
+        <mark key="." line="83" column="5" />
+        <mark key="^" line="83" column="5" />
+      </file>
+      <file name="$USER_HOME$/dev/mokey/src/main/kotlin/no/skatteetaten/aurora/mokey/service/OpenShiftPhaseGenerator.kt" timestamp="1585914324440">
+        <mark key="]" line="7" column="0" />
+        <mark key="^" line="7" column="0" />
+        <mark key="." line="7" column="0" />
+      </file>
+      <file name="$USER_HOME$/dev/mokey/src/test/kotlin/no/skatteetaten/aurora/mokey/service/OpenShiftPhaseGenerator.kt" timestamp="1585914288557">
+        <mark key="[" line="6" column="3" />
+        <mark key="]" line="7" column="42" />
+        <mark key="." line="7" column="42" />
+        <mark key="^" line="7" column="42" />
+      </file>
+      <file name="$USER_HOME$/dev/mokey/src/main/kotlin/no/skatteetaten/aurora/mokey/ApplicationConfig.kt" timestamp="1585773628138">
+        <mark key="[" line="98" column="0" />
+        <mark key="]" line="98" column="63" />
+      </file>
+    </filemarks>
+    <jumps>
+      <jump line="84" column="43" filename="$USER_HOME$/dev/mokey/src/main/kotlin/no/skatteetaten/aurora/mokey/service/ManagementDataService.kt" />
+      <jump line="0" column="0" filename="$USER_HOME$/dev/mokey/src/main/kotlin/no/skatteetaten/aurora/mokey/service/ManagementDataService.kt" />
+      <jump line="27" column="6" filename="$USER_HOME$/dev/mokey/src/main/kotlin/no/skatteetaten/aurora/mokey/service/OpenShiftManagementClient.kt" />
+      <jump line="79" column="0" filename="$USER_HOME$/dev/boober/src/main/kotlin/no/skatteetaten/aurora/boober/controller/security/BearerAuthenticationManager.kt" />
+      <jump line="43" column="0" filename="$USER_HOME$/dev/boober/src/main/resources/application.yaml" />
+      <jump line="82" column="14" filename="$USER_HOME$/dev/boober/src/test/resources/no/skatteetaten/aurora/boober/feature/JavaDeployFeatureTest/dc-expanded.json" />
+      <jump line="78" column="15" filename="$USER_HOME$/dev/boober/src/test/resources/no/skatteetaten/aurora/boober/feature/JavaDeployFeatureTest/dc-expanded.json" />
+      <jump line="34" column="0" filename="$USER_HOME$/dev/boober/src/test/kotlin/no/skatteetaten/aurora/boober/feature/JobFeatureTest.kt" />
+      <jump line="8" column="3" filename="$USER_HOME$/dev/boober/src/test/resources/samples/result/utv/job/job.json" />
+      <jump line="157" column="24" filename="$USER_HOME$/dev/boober/src/main/kotlin/no/skatteetaten/aurora/boober/feature/JobFeature.kt" />
+      <jump line="117" column="37" filename="$USER_HOME$/dev/boober/src/main/kotlin/no/skatteetaten/aurora/boober/feature/JobFeature.kt" />
+      <jump line="36" column="30" filename="$USER_HOME$/dev/boober/src/main/kotlin/no/skatteetaten/aurora/boober/feature/JobFeature.kt" />
+      <jump line="0" column="0" filename="$USER_HOME$/dev/boober/src/main/kotlin/no/skatteetaten/aurora/boober/feature/JobFeature.kt" />
+      <jump line="27" column="8" filename="$USER_HOME$/dev/boober/src/test/kotlin/no/skatteetaten/aurora/boober/feature/JobFeatureTest.kt" />
+      <jump line="54" column="0" filename="$USER_HOME$/dev/mokey/src/main/kotlin/no/skatteetaten/aurora/mokey/model/ApplicationData.kt" />
+      <jump line="22" column="15" filename="$USER_HOME$/dev/mokey/src/test/kotlin/no/skatteetaten/aurora/mokey/service/AuroraPhaseCalculatorTest.kt" />
+      <jump line="25" column="0" filename="$USER_HOME$/dev/mokey/src/test/kotlin/no/skatteetaten/aurora/mokey/service/AuroraPhaseCalculatorTest.kt" />
+      <jump line="164" column="23" filename="$USER_HOME$/dev/boober/src/main/kotlin/no/skatteetaten/aurora/boober/feature/AbstractDeployFeature.kt" />
+      <jump line="204" column="4" filename="$USER_HOME$/dev/boober/src/main/kotlin/no/skatteetaten/aurora/boober/feature/JobFeature.kt" />
+      <jump line="105" column="101" filename="$USER_HOME$/dev/boober/src/main/kotlin/no/skatteetaten/aurora/boober/feature/JobFeature.kt" />
+      <jump line="205" column="24" filename="$USER_HOME$/dev/boober/src/main/kotlin/no/skatteetaten/aurora/boober/feature/JobFeature.kt" />
+      <jump line="265" column="16" filename="$USER_HOME$/dev/boober/src/main/kotlin/no/skatteetaten/aurora/boober/feature/SecretVaultFeature.kt" />
+      <jump line="39" column="87" filename="$USER_HOME$/dev/webflux-playground/src/main/kotlin/org/bjartek/webfluxrefapp/WebfluxRefappApplication.kt" />
+    </jumps>
+    <registers>
+      <register name="&quot;" type="4">
+        <text>a</text>
+      </register>
+      <register name="-" type="4">
+        <text>a</text>
+      </register>
+      <register name="0" type="4">
+        <text encoding="base64">ZnVuIExpc3Q8RGVwbG95bWVudENvbmRpdGlvbj4uZmluZFBoYXNlKHNjYWxpbmdMaW1pdDogRHVyYXRpb24sIHRpbWU6IEluc3RhbnQpOiBTdHJpbmc/IHsKICAgIHZhbCBwcm9ncmVzc2luZyA9IHRoaXMuZmluZCB7IGl0LnR5cGUgPT0gIlByb2dyZXNzaW5nIiB9ID86IHJldHVybiBudWxsIC8vIFRPRE8gbm9kZXBsb3kKCiAgICB2YWwgYXZhaWxhYmlsaXR5UGhhc2UgPSB0aGlzLmZpbmQgeyBpdC50eXBlID09ICJBdmFpbGFibGUiIH0/LmZpbmRBdmFpbGFibGVTdGF0dXMoc2NhbGluZ0xpbWl0LCB0aW1lKQoKICAgIHZhbCBwcm9ncmVzc2luZ1N0YXR1cyA9IHByb2dyZXNzaW5nLmZpbmRQcm9ncmVzc2luZ1N0YXR1cygpCiAgICBpZiAocHJvZ3Jlc3NpbmdTdGF0dXMgIT0gIkNvbXBsZXRlIikgewogICAgICAgIHJldHVybiBwcm9ncmVzc2luZ1N0YXR1cwogICAgfQoKICAgIHJldHVybiBhdmFpbGFiaWxpdHlQaGFzZQp9CgpmdW4gRGVwbG95bWVudENvbmRpdGlvbi5maW5kQXZhaWxhYmxlU3RhdHVzKGxpbWl0OiBEdXJhdGlvbiwgdGltZTogSW5zdGFudCk6IFN0cmluZyB7CgogICAgaWYgKHRoaXMuc3RhdHVzLnRvTG93ZXJDYXNlKCkgIT0gImZhbHNlIikgewogICAgICAgIHJldHVybiAiQ29tcGxldGUiCiAgICB9CiAgICB2YWwgdXBkYXRlZEF0ID0gSW5zdGFudC5wYXJzZSh0aGlzLmxhc3RVcGRhdGVUaW1lKQogICAgdmFsIGR1cmF0aW9uID0gRHVyYXRpb24uYmV0d2Vlbih1cGRhdGVkQXQsIHRpbWUpCiAgICByZXR1cm4gaWYgKGR1cmF0aW9uID4gbGltaXQpIHsKICAgICAgICAvLyBXZSBoYXZlIHRyaWVkIHNjYWxpbmcgb3ZlciB0aGUgbGltaXQKICAgICAgICAvLyBUT0RPOiBUaGlzIHNob3VsZCByZWFsbHkgYmUgU2NhbGluZyBUaW1lb3V0CiAgICAgICAgIkNvbXBsZXRlIgogICAgfSBlbHNlIHsKICAgICAgICAiU2NhbGluZyIKICAgIH0KfQoKZnVuIERlcGxveW1lbnRDb25kaXRpb24uZmluZFByb2dyZXNzaW5nU3RhdHVzKCk6IFN0cmluZyB7CiAgICBpZiAodGhpcy5zdGF0dXMudG9Mb3dlckNhc2UoKSA9PSAiZmFsc2UiKSB7CiAgICAgICAgcmV0dXJuICJGYWlsZWQiCiAgICB9CiAgICAvLyBUT0RPOiBkb3VibGUgY2hlY2sgdGhpcyB2YWx1ZQogICAgcmV0dXJuIGlmICh0aGlzLnJlYXNvbiA9PSAiTmV3UmVwbGljYVNldEF2YWlsYWJsZSIgfHwgdGhpcy5yZWFzb24gPT0gIk5ld1JlcGxpY2F0aW9uQ29udHJvbGxlckF2YWlsYWJsZSIpIHsKICAgICAgICAiQ29tcGxldGUiCiAgICB9IGVsc2UgewogICAgICAgICJEZXBsb3ltZW50UHJvZ3Jlc3NpbmciCiAgICB9Cn0=</text>
+      </register>
+      <register name="1" type="2">
+        <text encoding="base64">Ly8gVE9ETzogSW5mbyBjYW4gaGF2ZSBwb2RsaW5rcyB0aGF0IGFyZSBkaWZmZXJlbnQgZm9yIGVhY2ggcG9kLCBzbyB3ZSBtaWdodCBuZWVkIGRpZmZlcmVudCBjYWNoZSBrZXkgdGhlcmUuCg==</text>
+      </register>
+      <register name="2" type="2">
+        <text encoding="base64">ICAgICAgICB0aGlzLnBvZC5tZXRhZGF0YS5uYW1lCg==</text>
+      </register>
+      <register name="3" type="2">
+        <text encoding="base64">ICAgICAgICB0aGlzLnBvZC5tZXRhZGF0YS5uYW1lLnN1YnN0cmluZ0JlZm9yZUxhc3QoIi0iKQo=</text>
+      </register>
+      <register name="4" type="2">
+        <text encoding="base64">Ly8gVE9ETzogV2UgaGF2ZSB0byBtYWtlIHN1cmUgdGhhdCByZXBsaWNhdGlvbiBpcyBjb3JyZWN0IGhlcmUgd2hlbiB3ZSBnbyB0byByZXBsaWNhc2V0Cg==</text>
+      </register>
+      <register name="5" type="2">
+        <text encoding="base64">Ly8gVE9ETzogSW5mbyBjYW4gaGF2ZSBwb2RsaW5rcyB0aGF0IGFyZSBkaWZmZXJlbnQgZm9yIGVhY2ggcG9kLCBzbyB3ZSBtaWdodCBuZWVkIGRpZmZlcmVudCBjYWNoZSBrZXkgdGhlcmUuCg==</text>
+      </register>
+      <register name="6" type="2">
+        <text encoding="base64">ICAgICAgIAo=</text>
+      </register>
+      <register name="7" type="4">
+        <text encoding="base64">ICAgICAgICAvLyA0MDEgdGhpcyBpcyBhbiBlcnJvcgogICAgICAgICAgICAgICAgbG9nZ2VyLmRlYnVnKCJSZXNwb25lIGVycm9yIHVybD0ke2VuZHBvaW50LnVybH0gc3RhdHVzPUVSUk9SIGJvZHk9e30iLCBlcnJvclJlc3BvbnNlLmNvbnRlbnQpCiAgICAgICAgICAgICAgICByZXR1cm4gdG9NYW5hZ2VtZW50RW5kcG9pbnRSZXN1bHRBc0Vycm9yKGV4Y2VwdGlvbiA9IGUsIHJlc3BvbnNlID0gZXJyb3JSZXNwb25zZSwgZW5kcG9pbnQgPSBlbmRwb2ludCkKICAgICAgICAgICAgfQ==</text>
+      </register>
+      <register name="8" type="2">
+        <text encoding="base64">ICAgICAgIAo=</text>
+      </register>
+      <register name="9" type="4">
+        <text encoding="base64">IH0gY2F0Y2ggKGU6IFdlYkNsaWVudFJlc3BvbnNlRXhjZXB0aW9uKSB7CiAgICAgICAgICAgIC8vIDQwMSB0aGlzIGlzIGFuIGVycm9yCiAgICAgICAgICAgIGxvZ2dlci5kZWJ1ZygiUmVzcG9uc2UgZXJyb3IgdXJsPSR7ZW5kcG9pbnQudXJsfSBzdGF0dXM9RVJST1IgYm9keT17fSIsIGUucmVzcG9uc2VCb2R5QXNTdHJpbmcpCiAgICAgICAgICAgIHJldHVybiB0b01hbmFnZW1lbnRFbmRwb2ludFJlc3VsdCgKICAgICAgICAgICAgICAgIHJlc3BvbnNlID0gSHR0cFJlc3BvbnNlKGUucmVzcG9uc2VCb2R5QXNTdHJpbmcsIGUucmF3U3RhdHVzQ29kZSksCiAgICAgICAgICAgICAgICByZXN1bHRDb2RlID0gIkVSUk9SX0hUVFAiLAogICAgICAgICAgICAgICAgZXJyb3JNZXNzYWdlID0gZS5sb2NhbGl6ZWRNZXNzYWdlLAogICAgICAgICAgICAgICAgZW5kcG9pbnQgPSBlbmRwb2ludAogICAgICAgICAgICAp</text>
+      </register>
+      <register name=":" type="4">
+        <text>action Find</text>
+      </register>
+    </registers>
+    <search>
+      <last-dir>0</last-dir>
+      <show-last>false</show-last>
+    </search>
+    <history>
+      <history-search />
+      <history-cmd>
+        <entry>wqa</entry>
+        <entry>action FindNext</entry>
+        <entry>w</entry>
+        <entry>action Find</entry>
+      </history-cmd>
+      <history-expr />
+      <history-input />
+    </history>
+  </component>
+</application>

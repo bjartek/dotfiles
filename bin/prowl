@@ -1,0 +1,7 @@
+#!/bin/bash
+app=$1
+shift
+desc=$@
+
+curl -s -k https://api.prowlapp.com/publicapi/add -F apikey=c0bca338393779fd5c0772d8e2a29de64846f136 -F application="$app" -F description="$desc" >> /dev/null 2>&1 
+

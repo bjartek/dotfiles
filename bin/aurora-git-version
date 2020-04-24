@@ -1,0 +1,9 @@
+#!/bin/bash
+
+version=3.1.3
+destination=/tmp/aurora-git-version-cli-${version}.jar
+
+
+[[ -f "$destination" ]] && curl -s http://aurora/nexus/content/groups/public-with-staging/no/skatteetaten/aurora/aurora-git-version-cli/${version}/aurora-git-version-cli-${version}-jar-with-dependencies.jar > $destination
+
+java -jar "$destination" $@ 2> /dev/null

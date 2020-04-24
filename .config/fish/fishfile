@@ -1,16 +1,13 @@
 edc/bass
 oh-my-fish/theme-bobthefish
 fisherman/cprintf
-
 franciscolourenco/done
 fisherman/fzf
 jorgebucaran/getopts
 fisherman/git_util
-
-
 jethrokuan/z
 jorgebucaran/FISH-await
 jorgebucaran/FISH-last-job-id
 jorgebucaran/shark
-
 reitzig/sdkman-for-fish
+oh-my-fish/plugin-aws

@@ -1,0 +1,5 @@
+#!/bin/bash
+[[ $# -ne 2 ]] && { echo "Usage: $0 <from> <to>"; exit 1; }
+from=$1
+to=$2
+rg $from --files-with-matches | xargs sed -i "s/$from/$to/g"

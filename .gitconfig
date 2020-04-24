@@ -6,6 +6,9 @@
   safecrlf = true
   excludesfile = ~/.gitignore_global
 [alias]
+  cleanbranch = !git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D
+  b = !gb
+  ba = !gbr
   aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
   fix = !sh -c 'git commit -a --fixup HEAD && git push'
   auto = rebase --interactive --autosquash  master
@@ -99,14 +102,7 @@
 [user]
 	name = Bjarte Karlsen
 	email = bjarte.karlsen@skatteetaten.no
-[filesystem "AdoptOpenJDK|11.0.4|/dev/disk1s1"]
-	timestampResolution = 7000 nanoseconds
-	minRacyThreshold = 0 nanoseconds
 [credential]
 	helper = cache --timeout=3600
-[filesystem "JetBrains s.r.o|11.0.4|/dev/nvme0n1p3"]
-	timestampResolution = 15000 nanoseconds
-	minRacyThreshold = 4058 microseconds
-[filesystem "Ubuntu|11.0.4|/dev/nvme0n1p3"]
-	timestampResolution = 12000 nanoseconds
-	minRacyThreshold = 7281 microseconds
+[fetch]
+	prune = true

@@ -1,3 +1,5 @@
 #!/bin/bash
 
+
+oc config delete-context $1
 oc config rename-context $(oc config current-context) $1

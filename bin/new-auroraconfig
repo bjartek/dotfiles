@@ -1,0 +1,30 @@
+#!/bin/bash
+
+main (){
+
+  setup_git_repos 
+
+}
+setup_git_repos() {
+  local group=APP_${name}_drift
+  local utvgroup=APP_${name}_utv
+  http -F -a boober:$BOOBER_PASSWORD POST https://git.aurora.skead.no/rest/api/1.0/projects/AC/repos name="$name"
+  http -F -a boober:$BOOBER_PASSWORD POST https://git.aurora.skead.no/rest/api/1.0/projects/AV/repos name="$name"
+  http -F -a boober:$BOOBER_PASSWORD PUT  "https://git.aurora.skead.no/rest/api/1.0/projects/AC/repos/$name/permissions/groups" name=="$group" permission==REPO_ADMIN
+  http -F -a boober:$BOOBER_PASSWORD PUT  "https://git.aurora.skead.no/rest/api/1.0/projects/AC/repos/$name/permissions/groups" name=="$utvgroup" permission==REPO_WRITE
+}
+
+
+# need one argument
+[[ "$#" -eq 2 ]] || error_exit "new-auroraconfig <password> <affiliation>"
+
+
+# required tools needed in script
+command -v http || error_exit "Install httpie"
+
+# a global variable
+BOOBER_PASSWORD="$1"
+name="$2"
+
+# start the main flow
+main 

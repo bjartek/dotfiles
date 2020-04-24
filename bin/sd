@@ -1,0 +1,4 @@
+#!bin/bash
+
+kubectl label deployment $1 skatteetaten.no/sprocket=sha1-$(kubectl get deployment $1 -o json | jq -j ".spec.template.spec.containers[].image" | sha1sum | cut -d' ' -f1) --overwrite
+

@@ -1,0 +1,33 @@
+#!/bin/bash
+set -euo pipefail
+
+[[ $# -ne 1 ]] && { echo "Usage: $0 <podName>"; exit 1; }
+
+
+main(){
+
+  podName=$1
+  jattach=/tmp/jattach
+  jattachVersion=v1.5
+  heapdump=/tmp/$podName.heapdump
+
+  oc whoami &> /dev/null 
+  oc get pod "$podName" &> /dev/null 
+
+  [[ ! -f "$jattach" ]] && echo "fetching jattach" && curl -s -L https://github.com/apangin/jattach/releases/download/$jattachVersion/jattach > $jattach
+
+  echo "Copy jattach to pod"
+  oc cp "$jattach" "$podName":"$jattach"
+  oc exec "$podName" -- chmod 755 $jattach
+
+  pid=$(oc exec "$podName" -- ps -aux | grep java | awk '{print $2}')
+  echo "pid of java process is $pid dumping heap"
+  oc exec "$podName" -- /tmp/jattach "$pid" dumpheap "$heapdump" -all
+  echo "copy heapdump to local file $heapdump"
+  oc cp "$podName:$heapdump" "$heapdump"
+
+  oc exec "$podName" -- rm "$jattach"
+  oc exec "$podName" -- rm "$heapdump"
+}
+
+main "$@"

@@ -1,0 +1,2 @@
+#!/bin/bash
+cat ~/.ao.json | jq '{ ref: .refName, apiCluster: .apiCluster, auroraConfig: .affiliation, localhost: .localhost, clusters: [.clusters[] | select(.reachable == true) | { url : .url, boober: .booberUrl }]}'

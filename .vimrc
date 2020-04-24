@@ -286,3 +286,5 @@ augroup vimwikigroup
     autocmd BufRead,BufNewFile diary.wiki VimwikiDiaryGenerateLinks
 augroup end
 
+" vimwiki
+Plug 'vimwiki/vimwiki'

@@ -1,0 +1,7 @@
+#!/bin/sh
+[[ "$#" -lt 1 ]] && echo "mokey <adname>" && exit 1
+adi=$(oc get ad $1 -o json | jq -r ".spec.applicationDeploymentId")
+
+token=$(oc whoami -t)
+
+http http://mokey-aurora.utv.paas.skead.no/api/auth/applicationdeploymentdetails/$adi Authorization:"Bearer $token" 

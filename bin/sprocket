@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+[[ "$#" -lt 2 ]] && echo "sprocket <app> <namespace>" && exit 1
+
+oc label is $1 -n $2 skatteetaten.no/sprocket=sha1-$(oc get is $1 -n $2 -o json | jq -r ".spec.tags[].from.name" | sha1sum | cut -d' ' -f1) --overwrite

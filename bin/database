@@ -1,0 +1,2 @@
+#!/bin/bash
+oc get dc "$1" -n "$2" -o json | jq -r '.spec.template.spec.volumes[].secret.secretName' | grep "\-db"

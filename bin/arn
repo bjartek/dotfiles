@@ -1,0 +1,3 @@
+#!/bin/bash
+
+aws eks get-token --cluster-name eks04 --region eu-north-1 | jq ".status.token" -r | sed 's/k8s-aws-v1.//g' | xargs base64url decode | xargs -I{} http GET "{}" x-k8s-aws-id:eks04 Accept:application/json --verify=no | jq '.GetCallerIdentityResponse.GetCallerIdentityResult.Arn' -r
