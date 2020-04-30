@@ -106,3 +106,6 @@
 	helper = cache --timeout=3600
 [fetch]
 	prune = true
+[filesystem "AdoptOpenJDK|11.0.7|/dev/disk1s1"]
+	timestampResolution = 21000 nanoseconds
+	minRacyThreshold = 0 nanoseconds
