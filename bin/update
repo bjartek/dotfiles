@@ -2,7 +2,7 @@
 
 echo "update dotfiles"
 
-yadm update
+yadm pull
 echo "decrypt yadm"
 yadm decrypt
 

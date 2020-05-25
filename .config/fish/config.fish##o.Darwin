@@ -3,6 +3,7 @@ set -x PS4 '+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
 
 set -g theme_date_format "+%H:%M"
 set -g theme_nerd_fonts yes
+set -g theme_date_timezone Europe/Oslo
 set -x LANG en_US.UTF-8
 set -g GOPATH ~/go
 set -g GOROOT /usr/local/opt/go/libexec
