@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing homebrew"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install yadm fish
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew install yadm fish gpg
 
 yadm clone https://github.com/bjartek/dotfiles.git
