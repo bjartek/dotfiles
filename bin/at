@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat $1.json | yq r -P - > $1.yaml

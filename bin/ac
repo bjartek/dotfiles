@@ -4,4 +4,4 @@
 
 name=$1
 
-new-auroraconfig "$(security find-generic-password -s boober-git  -w)" $name
+new-auroraconfig "$(security find-generic-password -s boober -w)" $name

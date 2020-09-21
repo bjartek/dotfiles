@@ -102,6 +102,7 @@
 [user]
 	name = Bjarte Karlsen
 	email = bjarte.karlsen@skatteetaten.no
+	signingkey = C29158C25FBCE67C
 [credential]
 	helper = cache --timeout=3600
 [fetch]
@@ -111,4 +112,12 @@
 	minRacyThreshold = 0 nanoseconds
 [filesystem "AdoptOpenJDK|11.0.7|/dev/disk1s1"]
 	timestampResolution = 8000 nanoseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "AdoptOpenJDK|11.0.7|/dev/disk1s5"]
+	timestampResolution = 7000 nanoseconds
+	minRacyThreshold = 0 nanoseconds
+[commit]
+	gpgsign = true
+[filesystem "AdoptOpenJDK|11.0.8|/dev/disk1s5"]
+	timestampResolution = 14000 nanoseconds
 	minRacyThreshold = 0 nanoseconds

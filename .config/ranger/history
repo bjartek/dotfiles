@@ -4,3 +4,10 @@ search ranger
 search clerk
 open_with 
 search mean
+he
+qa
+rm ah.json
+! rm ah.json
+delete
+wqa
+q

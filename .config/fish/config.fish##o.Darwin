@@ -5,7 +5,6 @@ set -g theme_date_format "+%H:%M"
 set -g theme_nerd_fonts yes
 set -g theme_date_timezone Europe/Oslo
 set -x LANG en_US.UTF-8
-set -g GOPATH ~/go
 set -g GOROOT /usr/local/opt/go/libexec
 
 set -x AWS_CA_BUNDLE /etc/ssl/certs/ske-root-ca-2033-03-18.pem
@@ -25,6 +24,9 @@ alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias l="exa -lG --git"
 alias ..="cd .."
 alias ...="cd ../.."
+alias k=kubectl
+alias m=make
 set -U FZF_COMPLETE 1
 set -g -x BAT_THEME TwoDark
 set -g fish_user_paths "/usr/local/opt/node@10/bin" $fish_user_paths
+

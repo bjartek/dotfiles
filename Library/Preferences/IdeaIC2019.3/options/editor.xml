@@ -1,7 +1,0 @@
-<application>
-  <component name="DaemonCodeAnalyzerSettings" profile="Aurora Inspections" />
-  <component name="EditorSettings">
-    <option name="SOFT_WRAP_FILE_MASKS" value="*.md; *.txt; *.rst; *.adoc" />
-    <option name="IS_WHEEL_FONTCHANGE_ENABLED" value="true" />
-  </component>
-</application>
