@@ -9,7 +9,7 @@
   cleanbranch = !git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D
   b = !gb
   ba = !gbr
-  aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
   fix = !sh -c 'git commit -a --fixup HEAD && git push'
   auto = rebase --interactive --autosquash  master
   bd = branch -d
@@ -120,4 +120,7 @@
 	gpgsign = true
 [filesystem "AdoptOpenJDK|11.0.8|/dev/disk1s5"]
 	timestampResolution = 14000 nanoseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "AdoptOpenJDK|11.0.8|/dev/disk1s1"]
+	timestampResolution = 8000 nanoseconds
 	minRacyThreshold = 0 nanoseconds

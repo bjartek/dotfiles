@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+
+print_usage() {
+  printf "Usage: proxyGet -jp <pod> <endpoint> 
+    -j enables json output
+    -p will prepend pod name as column to left 
+  ..."
+  exit 1
+}
+
+[[ "$#" -lt 2 ]] && print_usage 
+
+jsonFlag=false
+podColumnFlag=false
+
+while getopts 'jp:v' flag; do
+  case "${flag}" in
+    j) jsonFlag=true ;;
+    p) podColumnFlag=true ;;
+    *) print_usage
+  esac
+done
+shift 1
+
+podname=$1
+path=$2
+
+
+oc whoami &> /dev/null || (echo "log in to cluster" && exit 1)
+
+context=$(yq r ~/.kube/config "current-context")
+contextObject=$(yq r ~/.kube/config -j | jq --arg context "$context" '.contexts[] | select(.name==$context)')
+ns=$(echo $contextObject | jq -r ".context.namespace")
+clusterName=$(echo $contextObject | jq -r ".context.cluster")
+url=$(yq r ~/.kube/config -j | jq -r --arg cluster "$clusterName" '.clusters[] | select(.name==$cluster) | .cluster.server') 
+
+port=8081
+token=$(oc whoami -t)
+
+if [[ "$jsonFlag" == true ]]; then
+  if [[ "$podColumnFlag" == true ]]; then
+    http GET $url/api/v1/namespaces/$ns/pods/$podname:$port/proxy/$path Authorization:"Bearer $token" --verify=no  | jq '.' |  sed -e "s/^/$podname  /"
+  else
+    http GET $url/api/v1/namespaces/$ns/pods/$podname:$port/proxy/$path Authorization:"Bearer $token" --verify=no | jq '.'
+  fi
+  exit 0
+fi
+
+if [[ "$podColumnFlag" == true ]]; then
+  http GET $url/api/v1/namespaces/$ns/pods/$podname:$port/proxy/$path Authorization:"Bearer $token" --verify=no | sed -e "s/^/$podname  /"
+  exit 0
+fi
+
+http GET $url/api/v1/namespaces/$ns/pods/$podname:$port/proxy/$path Authorization:"Bearer $token" --verify=no 

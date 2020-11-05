@@ -1,5 +1,7 @@
 #!bin/bash
 
+
+defaults write -g ApplePressAndHoldEnabled 0
 #Inspirations
 #https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 

@@ -1,3 +1,0 @@
-#!/bin/bash
-[[ "$#" -lt 2 ]] && echo "ma <service> <endpoint>" && exit 1
-oc get pods -lapp=$1 -o json | jq -r ".items[].metadata.name" | xargs -i management {} "$2"

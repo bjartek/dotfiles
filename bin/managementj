@@ -1,8 +1,0 @@
-#!/bin/bash -euo pipefail
-
-[[ "$#" -lt 2 ]] && echo "management <pod> <endpoint>" && exit 1
-
-(oc port-forward $1 8888:8081 & ) &> /dev/null
-sleep 1 
-http GET :8888/$2 | jq "." | sed -e "s/^/$1  /" 
-pkill -P $$
