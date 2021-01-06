@@ -1,8 +1,0 @@
-#!/bin/bash
-
-
-filename="aurora-atomhopper-1.0.0.json"
-BOOBER_PASSWORD=$(security find-generic-password -s boober -w)
-
-http -f -F -a boober:$BOOBER_PASSWORD PUT https://git.aurora.skead.no/rest/api/1.0/projects/AO/repos/auroratemplates/browse/$filename sourceCommitId=$1 content@~/ah.json message="Update file from cli" branch=master  -vvv
-

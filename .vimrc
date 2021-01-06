@@ -287,4 +287,3 @@ augroup vimwikigroup
 augroup end
 
 " vimwiki
-Plug 'vimwiki/vimwiki'

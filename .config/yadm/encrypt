@@ -5,6 +5,7 @@
 .ssh/*
 .config/keybase/*
 bin/prowl
+
 .exercism.json
 .config/fish/conf.d/github.fish
 .s/*
@@ -16,3 +17,14 @@ bin/prowl
 .gradle/init.gradle
 .aws/config
 .aws/credentails
+bin/name
+bin/aurora-git-version
+bin/group
+bin/new-auroraconfig
+bin/oc-status
+bin/findFileContent
+bin/findfile
+bin/mokey
+bin/findFileCommits
+bin/uploadFileContent
+bin/user

@@ -1,7 +1,0 @@
-#!/bin/bash
-if [ "$#" -lt 1 ]; then
-  echo "Spefisier IDENT"
-  exit 1
-fi
-ldapsearch -Q -V -h "skead.no" -b "OU=Skatteetaten,DC=skead,DC=no" "(&(objectCategory=person)(objectClass=user)(sAMAccountName=$1))"
-

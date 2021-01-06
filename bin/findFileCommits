@@ -1,9 +1,0 @@
-#!/bin/bash
-
-commit="a4641c53370"
-filename="aurora-atomhopper-1.0.0.json"
-
-BOOBER_PASSWORD=$(security find-generic-password -s boober -w)
-
-http -F -a boober:$BOOBER_PASSWORD GET https://git.aurora.skead.no/rest/api/1.0/projects/AO/repos/auroratemplates/commits followRenames==true path==$filename since==$commit -vvv
-

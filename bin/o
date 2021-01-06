@@ -2,4 +2,4 @@
 
 [[ "$#" -lt 1 ]] && error_exit "o <cluster>"
 
-oc login "$1"-master.paas.skead.no:8443 -u m89870 -p "$(security find-generic-password -a "$USER" -s openshift -w)"
+oc login "$1"-master.paas.skead.no:8443 -u $USER -p "$(security find-generic-password -a "$USER" -s openshift -w)"

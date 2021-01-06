@@ -1,6 +1,0 @@
-#!/bin/bash
-if [ "$#" -lt 1 ]; then
-  echo "Spefisier gruppe"
-  exit 1
-fi
-ldapsearch -Q -V -h "skead.no" -b "DC=skead,DC=no" "(&(objectCategory=Group)(objectClass=group)(name=$1))"
