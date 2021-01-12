@@ -1,0 +1,23 @@
+let skatt= {}
+let skatt.name='Bjarteskatt'
+let skatt.path = '~/.s/wiki/skatt'
+let skatt.syntax= 'markdown'
+let skatt.ext= 'md'
+let skatt.auto_toc=1
+let skatt.automatic_nested_syntaxes=1
+let skatt.diary_rel_path=''
+let skatt.diary_header='Møtereferater'
+let skatt.auto_tags=1
+let skatt.auto_diary_index=1
+let skatt.auto_generate_links=1
+let skatt.auto_generate_tags=1
+
+
+
+
+
+
+
+let g:vimwiki_list = [skatt]
+
+call vimwiki#vars#init()

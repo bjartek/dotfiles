@@ -277,7 +277,6 @@ function! g:committia_hooks.edit_open(info)
     imap <buffer><C-p> <Plug>(committia-scroll-diff-up-half)
 endfunction
 
-let g:vimwiki_list = [ {'path': '~/.s/wiki/wyn'},{'path': '~/.s/wiki/tech'}, {'path': '~/.s/wiki/jonathan'}]
 
 command! Diary VimwikiDiaryIndex
 augroup vimwikigroup
@@ -287,3 +286,9 @@ augroup vimwikigroup
 augroup end
 
 " vimwiki
+" " If there are any machine-specific tweaks for Vim, load them from the following file.
+try
+  source ~/.vimrc_local
+catch
+  " No such file? No problem; just ignore it.
+endtry
