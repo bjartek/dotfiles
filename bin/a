@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[[ "$#" -lt 1 ]] && error_exit "a <auroraConfig>"
+[[ "$#" -lt 1 ]] && echo "a <auroraConfig>" && exit 1
 
 name=$1
 shift

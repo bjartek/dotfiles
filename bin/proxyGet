@@ -28,11 +28,11 @@ path=$2
 
 oc whoami &> /dev/null || (echo "log in to cluster" && exit 1)
 
-context=$(yq r ~/.kube/config "current-context")
-contextObject=$(yq r ~/.kube/config -j | jq --arg context "$context" '.contexts[] | select(.name==$context)')
+context=$(yq e '.current-context' ~/.kube/config)
+contextObject=$(yq e '.' ~/.kube/config -j | jq --arg context "$context" '.contexts[] | select(.name==$context)')
 ns=$(echo $contextObject | jq -r ".context.namespace")
 clusterName=$(echo $contextObject | jq -r ".context.cluster")
-url=$(yq r ~/.kube/config -j | jq -r --arg cluster "$clusterName" '.clusters[] | select(.name==$cluster) | .cluster.server') 
+url=$(yq e '.' ~/.kube/config -j | jq -r --arg cluster "$clusterName" '.clusters[] | select(.name==$cluster) | .cluster.server') 
 
 port=8081
 token=$(oc whoami -t)

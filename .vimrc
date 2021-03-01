@@ -90,8 +90,6 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'rhysd/committia.vim'
 
 
-Plug 'mhinz/vim-startify'
-
 " Return to last edit position when opening files, except git commit message
  autocmd BufReadPost *
    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
