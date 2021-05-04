@@ -25,7 +25,7 @@ tide_left_prompt_frame_enabled true
 tide_left_prompt_item_separator_diff_color ''
 tide_left_prompt_item_separator_same_color ''
 tide_left_prompt_item_separator_same_color_color 949494
-tide_left_prompt_items 'pwd' 'git' 'newline'
+tide_left_prompt_items pwd git newline
 tide_left_prompt_pad_items true
 tide_left_prompt_prefix ''
 tide_left_prompt_suffix ''
@@ -35,7 +35,10 @@ tide_nvm_default_node
 tide_nvm_icon '⬢'
 tide_os_bg_color CED7CF
 tide_os_color 080808
-tide_print_newline_before_prompt 'true'
+tide_php_bg_color 75507B
+tide_php_color 000000
+tide_php_icon ''
+tide_print_newline_before_prompt true
 tide_prompt_char_bg_color normal
 tide_prompt_char_failure_color FF0000
 tide_prompt_char_icon '❯'
@@ -43,10 +46,10 @@ tide_prompt_char_success_color $_tide_color_green
 tide_prompt_char_vi_default_icon '❮'
 tide_prompt_char_vi_insert_icon '❯'
 tide_prompt_char_vi_replace_icon '▶'
-tide_prompt_char_vi_visual_icon 'V'
+tide_prompt_char_vi_visual_icon V
 tide_prompt_connection_color 6C6C6C
 tide_prompt_connection_icon ''
-tide_pwd_anchors 'first' 'last'
+tide_pwd_anchors first last
 tide_pwd_bg_color 3465A4
 tide_pwd_color_anchors E4E4E4
 tide_pwd_color_dirs E4E4E4
@@ -61,10 +64,13 @@ tide_right_prompt_frame_enabled true
 tide_right_prompt_item_separator_diff_color ''
 tide_right_prompt_item_separator_same_color ''
 tide_right_prompt_item_separator_same_color_color 949494
-tide_right_prompt_items 'status' 'cmd_duration' 'context' 'jobs' 'nvm' 'virtual_env' 'rust' 'vi_mode'
+tide_right_prompt_items status cmd_duration context jobs nvm virtual_env rust php vi_mode chruby
 tide_right_prompt_pad_items true
 tide_right_prompt_prefix ''
 tide_right_prompt_suffix ''
+tide_chruby_bg_color CC342D
+tide_chruby_color white
+tide_chruby_icon ''
 tide_rust_bg_color FF8700
 tide_rust_color 2E3436
 tide_rust_icon ''
@@ -93,5 +99,5 @@ tide_vi_mode_visual_color 000000
 tide_vi_mode_visual_icon VISUAL
 tide_virtual_env_bg_color 444444
 tide_virtual_env_color 00AFAF
-tide_virtual_env_display_mode 'projectName'
+tide_virtual_env_display_mode projectName
 tide_virtual_env_icon ''

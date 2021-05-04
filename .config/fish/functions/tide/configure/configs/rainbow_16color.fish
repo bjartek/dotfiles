@@ -21,6 +21,8 @@ tide_nvm_bg_color magenta
 tide_nvm_color black
 tide_os_bg_color white
 tide_os_color black
+tide_php_bg_color magenta
+tide_php_color black
 tide_prompt_char_bg_color normal
 tide_prompt_char_failure_color brred
 tide_prompt_char_success_color brgreen
@@ -31,6 +33,8 @@ tide_pwd_color_dirs brwhite
 tide_pwd_color_truncated_dirs white
 tide_right_prompt_frame_color brblack
 tide_right_prompt_item_separator_same_color_color brblack
+tide_chruby_bg_color red
+tide_chruby_color black
 tide_rust_bg_color yellow
 tide_rust_color black
 tide_status_failure_bg_color red

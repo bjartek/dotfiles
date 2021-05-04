@@ -8,3 +8,5 @@ jethrokuan/z
 reitzig/sdkman-for-fish
 gazorby/fish-abbreviation-tips
 IlanCosman/tide
+evanlucas/fish-kubectl-completions
+jorgebucaran/nvm.fish

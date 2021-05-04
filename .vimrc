@@ -9,6 +9,9 @@ endif
 
 call plug#begin()
 
+Plug 'tsandall/vim-rego'
+
+Plug 'ktonga/vim-follow-my-lead'
 Plug 'vimwiki/vimwiki'
 Plug 'rkitover/vimpager'
 Plug 'editorconfig/editorconfig-vim'

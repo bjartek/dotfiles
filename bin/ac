@@ -1,7 +1,0 @@
-#!/bin/bash
-
-[[ "$#" -lt 1 ]] && error_exit "ac <affiliation>"
-
-name=$1
-
-new-auroraconfig "$(security find-generic-password -s boober -w)" $name
