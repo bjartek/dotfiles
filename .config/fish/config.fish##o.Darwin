@@ -6,17 +6,16 @@ set -g theme_date_format "+%H:%M"
 set -g theme_nerd_fonts yes
 set -g theme_date_timezone Europe/Oslo
 set -x LANG en_US.UTF-8
-set -g GOROOT /usr/local/opt/go/libexec
 
 set -x AWS_CA_BUNDLE /etc/ssl/certs/ske-root-ca-2033-03-18.pem
 set -g GROOVY_TURN_OFF_JAVA_WARNINGS true
-set -x JAVA_HOME (/usr/libexec/java_home -v 11)
+set -x JAVA_HOME (/usr/libexec/java_home -v 14)
 set -x GRADLE_USER_HOME ~/.gradle
-set -x PATH  $HOME/bin $HOME/.krew/bin $HOME/go/bin $GOROOT $HOME/.cargo/bin /usr/local/opt/gnu-sed/libexec/gnubin /usr/local/opt/coreutils/libexec/gnubin /usr/local/opt/findutils/libexec/gnubin $PATH
+set -x PATH  $HOME/bin $HOME/.krew/bin $HOME/go/bin $GOROOT $HOME/.cargo/bin /usr/local/opt/gnu-sed/libexec/gnubin /usr/local/opt/coreutils/libexec/gnubin /usr/local/opt/findutils/libexec/gnubin /opt/homebrew/bin $PATH
 
 set -g theme_display_vi no
 set -g theme_display_k8s_context no
-set -g default_user m89870
+set -g default_user bjartek
 set -g theme_color_scheme solarized-dark
 set -g tide_prompt_char_vi_insert_icon '𝝺'
 
@@ -45,4 +44,4 @@ set -g -x BAT_THEME TwoDark
 set -g fish_user_paths "/usr/local/opt/node@10/bin" $fish_user_paths
 
 
-set -x  HOMEBREW_CASK_OPTS "--appdir=~/Applications"
+#set -x  HOMEBREW_CASK_OPTS "--appdir=~/Applications"

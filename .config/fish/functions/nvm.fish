@@ -11,7 +11,7 @@ function nvm --argument-names cmd v --description "Node version manager"
 
     switch "$cmd"
         case -v --version
-            echo "nvm, version 2.2.3"
+            echo "nvm, version 2.2.5"
         case "" -h --help
             echo "Usage: nvm install <version>    Download and activate the specified Node version"
             echo "       nvm install              Install version from nearest .nvmrc file"
@@ -26,7 +26,8 @@ function nvm --argument-names cmd v --description "Node version manager"
             echo "       -v or --version          Print version"
             echo "       -h or --help             Print this help message"
             echo "Variables:"
-            echo "       nvm_mirror               Set mirror for Node binaries"
+            echo "       nvm_arch                 Override architecture, e.g. x64-musl"
+            echo "       nvm_mirror               Set the Node download mirror"
             echo "       nvm_default_version      Set the default version for new shells"
         case install
             _nvm_index_update $nvm_mirror $nvm_data/.index || return
@@ -63,7 +64,8 @@ function nvm --argument-names cmd v --description "Node version manager"
                     case x86_64
                         set arch x64
                     case arm64
-                        if test "$os" = darwin
+                        string match --regex --quiet "v(?<major>\d+)" $v
+                        if test "$os" = darwin -a $major -lt 16
                             set arch x64
                         end
                     case armv6 armv6l
@@ -73,6 +75,8 @@ function nvm --argument-names cmd v --description "Node version manager"
                     case armv8 armv8l aarch64
                         set arch arm64
                 end
+
+                set --query nvm_arch && set arch $nvm_arch
 
                 set --local dir "node-$v-$os-$arch"
                 set --local url $nvm_mirror/$v/$dir.$ext
@@ -197,6 +201,6 @@ function _nvm_node_info
     command node --eval "
         console.log(process.version)
         console.log('$npm_version_default' ? '$npm_version_default': require('$npm_path/package.json').version)
-        console.log(process.execPath.replace(os.homedir(), '~'))
+        console.log(process.execPath.replace(require('os').homedir(), '~'))
     "
 end

@@ -30,10 +30,8 @@ end
 
 function _tide_title -a text
     clear
-
-    _tide_cursor_right (math --scale=0 "$fake_columns/2" - (string length $text)/2)
     set_color -o
-    printf '%s\n' $text
+    string pad --width (math --scale=0 "$fake_columns/2" + (string length $text)/2) $text
     set_color normal
 end
 
@@ -81,12 +79,8 @@ function _tide_display_prompt -a var_name var_value
     printf '\n\n'
 end
 
-function _find_and_remove -a name list --no-scope-shadowing
-    set -e "$list"[(contains --index $name $$list)] 2>/dev/null # Ignore error if $list doesn't contain $name
-end
-
 function _set_all_items_bg_color -a color
-    for var in (set --names | string match --regex "fake_.*_bg_color")
+    for var in (set --names | string match --regex "fake_.*_bg_color" | string match --invert --entire prompt_char)
         set $var $color
     end
 end

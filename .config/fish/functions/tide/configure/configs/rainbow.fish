@@ -49,7 +49,6 @@ tide_prompt_char_vi_replace_icon '▶'
 tide_prompt_char_vi_visual_icon V
 tide_prompt_connection_color 6C6C6C
 tide_prompt_connection_icon ''
-tide_pwd_anchors first last
 tide_pwd_bg_color 3465A4
 tide_pwd_color_anchors E4E4E4
 tide_pwd_color_dirs E4E4E4
@@ -74,8 +73,6 @@ tide_chruby_icon ''
 tide_rust_bg_color FF8700
 tide_rust_color 2E3436
 tide_rust_icon ''
-tide_rust_verbose_version true
-tide_status_always_display false
 tide_status_failure_bg_color CC0000
 tide_status_failure_color FFFF00
 tide_status_failure_icon '✘'

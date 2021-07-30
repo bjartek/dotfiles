@@ -1,12 +1,10 @@
 jorgebucaran/fisher
-edc/bass
+jethrokuan/z
+jethrokuan/fzf
+gazorby/fish-abbreviation-tips
 fisherman/cprintf
 franciscolourenco/done
 jorgebucaran/getopts
-jethrokuan/fzf
-jethrokuan/z
-reitzig/sdkman-for-fish
-gazorby/fish-abbreviation-tips
 IlanCosman/tide
-evanlucas/fish-kubectl-completions
+edc/bass
 jorgebucaran/nvm.fish

@@ -132,3 +132,5 @@
 	minRacyThreshold = 0 nanoseconds
 [init]
 	defaultBranch = main
+[gpg]
+	program = gpg2
