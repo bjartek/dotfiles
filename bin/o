@@ -1,5 +1,0 @@
-#!/bin/bash
-
-[[ "$#" -lt 1 ]] && echo "o <cluster>" && exit 1
-
-oc login "$1"-master.paas.skead.no:8443 -u $USER -p "$(security find-generic-password -a "$USER" -s openshift -w)"
