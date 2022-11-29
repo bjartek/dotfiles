@@ -8,23 +8,11 @@ bin/prowl
 
 .exercism.json
 .config/fish/conf.d/github.fish
+.config/fish/conf.d/flow.fish
 .s/*
 .config/Yubico/
-.kube/config
 .mrconfig
-.config/spring-boot/spring-boot-devtools.properties
-.m2/settings_sits.xml
-.gradle/init.gradle
-.aws/config
-.aws/credentails
-bin/name
-bin/aurora-git-version
-bin/group
-bin/new-auroraconfig
-bin/oc-status
 bin/findFileContent
 bin/findfile
-bin/mokey
 bin/findFileCommits
 bin/uploadFileContent
-bin/user

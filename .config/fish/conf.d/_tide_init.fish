@@ -1,23 +1,9 @@
 function _tide_init_install --on-event _tide_init_install
-    set -U _tide_var_list
+    set -U tide_os_icon (_tide_detect_os)
+    set -U VIRTUAL_ENV_DISABLE_PROMPT true
+    set -U _tide_var_list tide_os_icon VIRTUAL_ENV_DISABLE_PROMPT
 
-    # Tiny improvment to shell startup, which makes async faster
-    function _tide_set -a var_name
-        set -U $var_name $argv[2..-1]
-        set -a _tide_var_list $var_name
-    end
-
-    _tide_set _tide_color_dark_blue 0087AF
-    _tide_set _tide_color_dark_green 5FAF00
-    _tide_set _tide_color_gold D7AF00
-    _tide_set _tide_color_green 5FD700
-    _tide_set _tide_color_light_blue 00AFFF
-    _tide_set _tide_root (status dirname)/..
-    _tide_set _tide_os_icon (_tide_detect_os)
-    _tide_set VIRTUAL_ENV_DISABLE_PROMPT true
-
-    source $_tide_root/functions/tide/configure/choices/all/style.fish
-    source $_tide_root/functions/tide/configure/choices/all/finish.fish
+    source (functions --details _tide_sub_configure)
     _load_config lean
     _tide_finish
     set -a _tide_var_list (set --names | string match --regex "^tide.*")
@@ -30,7 +16,30 @@ function _tide_init_install --on-event _tide_init_install
     end
 end
 
+function _tide_init_update --on-event _tide_init_update
+    # v5 introduced tide_prompt_min_cols. Only proceed if older than v5
+    set --query tide_prompt_min_cols && return
+
+    # Save old vars to tmp file
+    set -l tmp (mktemp -t tide_old_config.XXXXX)
+    tide bug-report --verbose >$tmp
+
+    # Delete old vars
+    set -e $_tide_var_list _tide_var_list $_tide_prompt_var
+
+    # Print a warning
+    set_color yellow
+    echo "You have upgraded to version 5 of Tide."
+    echo "Since there are breaking changes, your old configuraton has been saved in:"
+    set_color normal
+    echo $tmp
+
+    sleep 5
+
+    _tide_init_install
+end
+
 function _tide_init_uninstall --on-event _tide_init_uninstall
-    set -e $_tide_var_list _tide_var_list
+    set -e $_tide_var_list _tide_var_list $_tide_prompt_var
     functions --erase (functions --all | string match --entire --regex '^_tide_')
 end

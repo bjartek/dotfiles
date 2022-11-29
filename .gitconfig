@@ -6,6 +6,7 @@
   safecrlf = true
   excludesfile = ~/.gitignore_global
 [alias]
+  change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f "
   cleanbranch = !git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D
   b = !gb
   ba = !gbr
@@ -78,8 +79,11 @@
 [push]
   default = upstream
   followTags = true
-[include]
-  path = ~/.gitconfig.local
+	autoSetupRemote = true
+[user]
+	name = Bjarte Stien Karlsen
+	email = bjarte@bjartek.org
+	signingkey = C29158C25FBCE67C
 [gitflow "branch"]
   master = master
   develop = develop
@@ -89,20 +93,16 @@
   hotfix = hotfix/
   support = support/
   versiontag = v
-[url "https://git.aurora.skead.no/scm/"]
-  insteadOf = g:
-[url "https://github.com/skatteetaten/"]
-  insteadOf = ghs:
+[url "https://github.com/findonflow/"]
+  insteadOf = f:
+[url "https://github.com/find-onefootball/"]
+  insteadOf = of:
 [http]
   followRedirects = 1
 [difftool "meld"]
     cmd = meld $LOCAL $REMOTE
 [mergetool "meld"]
     cmd = meld $LOCAL $MERGED $REMOTE --output $MERGED
-[user]
-	name = Bjarte Karlsen
-	email = bjarte.karlsen@skatteetaten.no
-	signingkey = C29158C25FBCE67C
 [credential]
 	helper = cache --timeout=3600
 [fetch]

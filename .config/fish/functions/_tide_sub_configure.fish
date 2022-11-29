@@ -1,17 +1,23 @@
+set -g _tide_color_dark_blue 0087AF
+set -g _tide_color_dark_green 5FAF00
+set -g _tide_color_gold D7AF00
+set -g _tide_color_green 5FD700
+set -g _tide_color_light_blue 00AFFF
+
+# Create an empty fake function for each item
+for func in _fake(functions --all | string match --entire _tide_item)
+    function $func
+    end
+end
+
+for file in (status dirname)/tide/configure/{choices, functions}/**.fish
+    source $file
+end
+
 function _tide_sub_configure
     if test $COLUMNS -lt 55 -o $LINES -lt 21
         printf '%s\n' 'Terminal size too small; must be at least 55 x 21'
         return 1
-    end
-
-    # Create an empty fake function for each item
-    for func in _fake(functions --all | string match --entire _tide_item)
-        function $func
-        end
-    end
-
-    for file in $_tide_root/functions/tide/configure/{choices, functions, prompt_items}/**.fish
-        source "$file"
     end
 
     set -g fake_columns $COLUMNS
@@ -23,7 +29,7 @@ function _tide_sub_configure
 end
 
 function _next_choice -a nextChoice
-    set -q _tide_selected_option || return
+    set -q _tide_selected_option || return 0
     set -l cmd (string split '/' $nextChoice)[2]
     $cmd
 end
@@ -44,15 +50,15 @@ function _tide_option -a symbol text
 end
 
 function _tide_menu
-    set -l listWithSlashes (string join '/' $_tide_option_list)
+    set -l list_with_slashes (string join '/' $_tide_option_list)
 
     printf '%s\n' \
-        '(r)  Restart from the beginning' \
-        '(q)  Quit and do nothing'\n
+        '(r) Restart from the beginning' \
+        '(q) Quit and do nothing'\n
 
     while true
         set_color -o
-        read --prompt-str "Choice [$listWithSlashes/r/q] " input
+        read --prompt-str "Choice [$list_with_slashes/r/q] " input
         set_color normal
 
         switch $input
@@ -75,12 +81,12 @@ end
 
 function _tide_display_prompt -a var_name var_value
     test -n "$var_name" && set -g $var_name $var_value
-    fake_prompt
+    _fake_tide_prompt
     printf '\n\n'
 end
 
 function _set_all_items_bg_color -a color
-    for var in (set --names | string match --regex "fake_.*_bg_color" | string match --invert --entire prompt_char)
+    for var in (set --names | string match --regex "fake_.*_bg_color.*" | string match --invert --entire character)
         set $var $color
     end
 end

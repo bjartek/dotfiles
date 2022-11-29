@@ -1,23 +1,30 @@
 {
-    "languageserver": {
-	"cadence": {
-	    "command": "flow",
-	    "args": [
-		"cadence",
-		"language-server"
-	    ],
-	    "initializationOptions":{
-		"accessCheckMode": "strict",
-		"configPath":"/Users/bluesign/flow.json",
-		"emulatorState":2,
-		"activeAccountName":"emulator-account",
-		"activeAccountAddress":"f8d6e0586b0a20c7"
-
-	    },
-	    "filetypes": [
-		"cdc",
-		"cadence"
-	    ]
+	"languageserver": {
+		"golangci-lint-languageserver": {
+      "command": "golangci-lint-langserver",
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "command": ["golangci-lint", "run", "--out-format", "json"]
+      }
+    },
+		"cadence": {
+			"command": "flow",
+			"args": [
+				"cadence",
+				"language-server"
+			],
+			"initializationOptions":{
+        "accessCheckMode": "none",
+				"configPath":"/Users/bjartek/flow/flow.json",
+				"emulatorState":2,
+				"activeAccountName":"emulator-account",
+				"activeAccountAddress":"f8d6e0586b0a20c7",
+				"numberOfAccounts" : "1"
+			},
+			"filetypes": [
+				"cdc",
+				"cadence"
+			]
+		}
 	}
-    }
 }

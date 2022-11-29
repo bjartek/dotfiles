@@ -9,19 +9,19 @@ function finish
     _tide_menu
     switch $_tide_selected_option
         case y
+            set -e _tide_selected_option # Skip through all the _next_choices
             _tide_finish
+            set $_tide_prompt_var
+            clear
     end
-
-    __tide_on_fish_exit
-    clear
 end
 
 function _tide_finish
     # Deal with prompt char/vi mode
-    if contains prompt_char $fake_tide_left_prompt_items
+    if contains character $fake_tide_left_prompt_items
         _tide_find_and_remove vi_mode fake_tide_right_prompt_items
     else
-        # If no prompt_char, insert vi_mode
+        # If no character, insert vi_mode
         _tide_find_and_remove vi_mode fake_tide_right_prompt_items
         if contains time $fake_tide_right_prompt_items
             set fake_tide_right_prompt_items $fake_tide_right_prompt_items[1..-2] vi_mode $fake_tide_right_prompt_items[-1]
