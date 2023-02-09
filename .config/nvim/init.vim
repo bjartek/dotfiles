@@ -37,6 +37,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'sjl/gundo.vim'
 Plug 'mjakl/vim-asciidoc'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'michal-h21/vimwiki-sync'
 
 " Initialize plugin system
 call plug#end()
@@ -227,3 +228,6 @@ colorscheme solarized
 
 highlight Pmenu ctermfg=254 ctermbg=241
 highlight PmenuSel ctermfg=254 ctermbg=136 cterm=bold
+
+"vimwiki-sync
+let g:vimwiki_sync_commit_message = 'Auto commit + push from nvim. %c'

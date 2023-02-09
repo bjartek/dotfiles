@@ -16,3 +16,4 @@ bin/findFileContent
 bin/findfile
 bin/findFileCommits
 bin/uploadFileContent
+.config/fish/conf.d/doodles.fish
