@@ -126,15 +126,32 @@ return  --[[
     },
   },
 },
--- setup formatters & linters
+--[[
 {
-  "jose-elias-alvarez/null-ls.nvim",
-  event = "BufReadPre",
-  dependencies = { "mason.nvim" },
+  "jay-babu/mason-null-ls.nvim",
+  event = { "BufReadPre", "BufNewFile" },
+  dependencies = {
+    "williamboman/mason.nvim",
+    "jose-elias-alvarez/null-ls.nvim",
+  },
   opts = function(_, opts)
     local nls = require("null-ls")
     vim.list_extend(opts.sources, {
       nls.builtins.formatting.goimports,
+    })
+  end,
+}
+]]
+--
+-- setup formatters & linters
+{
+  "jose-elias-alvarez/null-ls.nvim",
+  opts = function(_, opts)
+    local nls = require("null-ls")
+    vim.list_extend(opts.sources, {
+      nls.builtins.formatting.gofumpt,
+      nls.builtins.formatting.goimports,
+      nls.builtins.diagnostics.golangci_lint,
     })
   end,
 }
