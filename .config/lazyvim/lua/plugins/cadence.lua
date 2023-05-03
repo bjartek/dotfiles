@@ -4,7 +4,7 @@ return {
   config = function()
     vim.api.nvim_create_autocmd("BufWritePre", {
       pattern = { "*.cdc" },
-      command = ":normal gg=G",
+      command = ":normal gg=G''",
     })
     -- startup the cadence shared lspconfig
     require("lspconfig").cadence.setup({

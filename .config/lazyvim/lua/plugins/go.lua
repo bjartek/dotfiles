@@ -168,9 +168,20 @@ return  --[[
   opts = function(_, opts)
     local nls = require("null-ls")
     vim.list_extend(opts.sources, {
-      --nls.builtins.formatting.gofumpt,
-      nls.builtins.formatting.goimports,
+      nls.builtins.formatting.gofumpt,
+      --nls.builtins.formatting.goimports,
       nls.builtins.diagnostics.golangci_lint,
+    })
+  end,
+},
+{
+  "nvim-neotest/neotest",
+  dependencies = {
+    "nvim-neotest/neotest-go",
+  },
+  opts = function(_, opts)
+    opts.adapters = vim.list_extend(opts.adapters or {}, {
+      require("neotest-go"),
     })
   end,
 }
