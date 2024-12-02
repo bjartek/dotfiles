@@ -1,7 +1,7 @@
 [github]
   user = bjartek
 [core]
-  editor = vim
+  editor = nvim
   autocrlf = input
   safecrlf = true
   excludesfile = ~/.gitignore_global
@@ -80,6 +80,7 @@
   default = upstream
   followTags = true
 	autoSetupRemote = true
+	autoSetupRemote = true
 [user]
 	name = Bjarte Stien Karlsen
 	email = bjarte@bjartek.org
@@ -93,10 +94,12 @@
   hotfix = hotfix/
   support = support/
   versiontag = v
-[url "https://github.com/findonflow/"]
+[url "ssh://git@github.com/findonflow/"]
   insteadOf = f:
 [url "https://github.com/find-onefootball/"]
   insteadOf = of:
+  [url "ssh://git@github.com/"]
+ insteadOf = https://github.com/
 [http]
   followRedirects = 1
 [difftool "meld"]
@@ -134,3 +137,8 @@
 	defaultBranch = main
 [gpg]
 	program = gpg2
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
