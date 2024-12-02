@@ -5,3 +5,5 @@ export PATH="$HOME/.jenv/bin:$PATH"
 export SDKMAN_DIR="/Users/m89870/.sdkman"
 [[ -s "/Users/m89870/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/m89870/.sdkman/bin/sdkman-init.sh"
 . "$HOME/.cargo/env"
+
+export PATH="/Users/bjartek/.local/share/solana/install/active_release/bin:$PATH"

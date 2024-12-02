@@ -7,22 +7,21 @@ set -g theme_nerd_fonts yes
 set -g theme_date_timezone Europe/Oslo
 set -x LANG en_US.UTF-8
 
-set -x AWS_CA_BUNDLE /etc/ssl/certs/ske-root-ca-2033-03-18.pem
 set -g GROOVY_TURN_OFF_JAVA_WARNINGS true
 set -x JAVA_HOME (/usr/libexec/java_home -v 14)
 set -x GRADLE_USER_HOME ~/.gradle
-set -x PATH  $HOME/bin $HOME/.krew/bin $HOME/go/bin $GOROOT $HOME/.cargo/bin /usr/local/opt/gnu-sed/libexec/gnubin /usr/local/opt/coreutils/libexec/gnubin /usr/local/opt/findutils/libexec/gnubin /opt/homebrew/bin $PATH
+set -x PATH $HOME/bin $HOME/.krew/bin $HOME/go/bin $GOROOT $HOME/.cargo/bin /usr/local/opt/gnu-sed/libexec/gnubin /usr/local/opt/coreutils/libexec/gnubin /usr/local/opt/findutils/libexec/gnubin /opt/homebrew/bin $HOME/.foundry/bin $HOME/.local/share/solana/install/active_release/bin $HOME/.avm/bin $PATH
 
 set -g theme_display_vi no
-set -g theme_display_k8s_context no
+set -g theme_display_k8s_context yes
 set -g default_user bjartek
 set -g theme_color_scheme solarized-dark
-set -g tide_prompt_char_vi_insert_icon '𝝺'
+set -g tide_prompt_char_vi_insert_icon 𝝺
 
 alias ping='prettyping --nolegend'
 alias p="fzf --preview 'bat --color \"always\" {}'"
 alias b="fzf --preview 'bat --color \"always\" {}' | xargs bat"
-alias v="fzf --preview 'bat --color \"always\" {}' | xargs vim"
+alias v="fzf --preview 'bat --color \"always\" {}' | xargs nvim"
 alias help='tldr'
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias l="exa -l --git"
@@ -32,13 +31,9 @@ alias ....="cd ../../.."
 alias k=kubectl
 alias f=flux
 alias m=make
-abbr fi "flux get images all"
-abbr fs "flux get sources all"
-abbr fk "flux get kustomizations"
-abbr kki "kubectl krew install"
 set -U FZF_COMPLETE 1
 set -x FZF_DEFAULT_OPTS "--height 40% --layout=reverse"
-set -U FZF_FIND_FILE_COMMAND "fd --type f . \$dir" 
+set -U FZF_FIND_FILE_COMMAND "fd --type f . \$dir"
 
 set -g -x BAT_THEME TwoDark
 set -g fish_user_paths "/usr/local/opt/node@10/bin" $fish_user_paths
@@ -46,3 +41,19 @@ set -g fish_user_paths "/usr/local/opt/node@10/bin" $fish_user_paths
 
 #set -x  HOMEBREW_CASK_OPTS "--appdir=~/Applications"
 set -x HOSTNAME morx
+set -x ASSUME_NO_MOVING_GC_UNSAFE_RISK_IT_WITH go1.20
+set -x NVIM_APPNAME lazyvim
+set -x GOPRIVATE "github.com/findonflow/*"
+
+set -x USE_GKE_GCLOUD_AUTH_PLUGIN True
+
+alias kb='gcloud beta compute ssh prod01-bastion --tunnel-through-iap --project gke-prod01-9a52 --zone us-east1-b -- -L8888:127.0.0.1:8888'
+
+#set -x CLOUDSDK_PYTHON_SITEPACKAGES 1
+#stuff to get ko working
+set -x DOCKER_HOST unix:///Users/bjartek/.docker/run/docker.sock
+set -x KO_DOCKER_REPO ko.local
+
+set -x KUBECONFIG /Users/bjartek/.kube/config:/Users/bjartek/.kube/civo
+
+

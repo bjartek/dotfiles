@@ -1,3 +1,0 @@
-#!/bin/bash
-
-sed -ibak "s/boober-aurora.%s/$USER-boober.aurora.%s/" ~/.ao.json && ao adm update-clusters
